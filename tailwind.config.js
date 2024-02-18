@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('/hero.jpeg')",
+        'hero': "url('/100tlexus.jpeg')",
       },
     },
   },
