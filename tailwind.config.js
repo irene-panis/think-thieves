@@ -5,10 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'dmmono': ['DM Mono', 'ui-sans-serif'],
+      'montserrat': ['Montserrat', 'ui-sans-serif'],
+      'roboto': ['Roboto', 'ui-sans-serif']
+    },
     extend: {
       backgroundImage: {
         'hero': "url('/hero.jpeg')",
-      }
+      },
     },
   },
   plugins: [],
