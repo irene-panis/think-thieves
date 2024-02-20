@@ -1,11 +1,13 @@
 import puppeteer from "puppeteer";
 
-export const getValMatches = async () => {
+const getValMatches = async () => {
   const browser = await puppeteer.launch();
 
   const page = await browser.newPage();
-
-  const url = 'https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming';
+  
+  // https://www.vlr.gg/team/matches/120/100-thieves/?group=completed
+  // https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming
+  const url = 'https://www.vlr.gg/team/matches/120/100-thieves/?group=completed';
 
   await page.goto(url, {
     waitUntil: "domcontentloaded",
@@ -19,9 +21,9 @@ export const getValMatches = async () => {
     return { teamName };
   });
 
-  console.log(matches);
-
   await browser.close();
+  
+  return matches;
 };
 
-getValMatches();
+export default getValMatches;
