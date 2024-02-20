@@ -13,7 +13,7 @@ app.get('/api/get-val', async (req, res) => {
     const data = await getValMatches();
     res.json(data);
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ message: error.message });
   }
 });
 

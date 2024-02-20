@@ -14,15 +14,20 @@ const getValMatches = async () => {
   });
 
   const matches = await page.evaluate(() => {
-    const match = document.querySelector("a.wf-card");
-    const team = match.querySelector("div.m-item-team.mod-right > span.m-item-team-name");
-    const teamName = team.innerText;
+    const matchList = Array.from(document.querySelectorAll("a.wf-card.m-item")).slice(0, 10);
+    const matchData = [];
 
-    return { teamName };
+    matchList.forEach((match) => {
+      const team = match.querySelector("div.m-item-team.mod-right > span.m-item-team-name");
+      const teamName = team.innerText;
+      matchData.push({ teamName });
+  });
+
+    return matchData;
   });
 
   await browser.close();
-  
+
   return matches;
 };
 
