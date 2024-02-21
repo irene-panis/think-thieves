@@ -1,8 +1,7 @@
-export const Image = ({ src, caption }) => {
+export const Image = ({ src, styles }) => {
   return (
-    <div className="img-wrapper w-1/3 flex flex-col">
-      <img src={src}></img>
-      <span>{caption}</span>
+    <div className={`img-wrapper flex flex-col ${styles}`}>
+      <img src={src} className="object-cover object-center w-full h-full"></img>
     </div>
   )
 }
