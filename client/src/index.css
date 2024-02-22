@@ -93,4 +93,10 @@
 
 * {
   box-sizing: border-box;
+  font-size: clamp(1rem, 0.8vw, 5rem);
+}
+
+.text-wrapper > h2,
+.hero-wrapper h2 {
+  font-size: clamp(1.5rem, 4.2vw, 5rem);
 }
