@@ -1,6 +1,7 @@
 import { Navbar } from "../components/Navbar"
 import { Hero } from "../components/Hero"
 import { About } from "../components/About"
+import { Pillars } from "../components/Pillars"
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
         <Hero/>
       </div>
       <About/>
+      <Pillars/>
     </div>
   )
 }
