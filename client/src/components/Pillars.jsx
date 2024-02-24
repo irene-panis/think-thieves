@@ -17,15 +17,18 @@ export const Pillars = () => {
           divStyles="w-1/2"
         />
       </div>
-      <div className="img-section flex gap-10">
+      <div className="img-section w-full flex justify-evenly gap-10">
         <Image
           src="/lcs.jpeg"
+          styles="w-1/3 h-3/4"
         />
         <Image
           src="/content.jpeg"
+          styles="w-1/3"
         />
         <Image
           src="/apparel.jpeg"
+          styles="w-1/3 h-2/3"
         />
       </div>
     </div>
