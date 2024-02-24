@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <div className="about-wrapper flex justify-center items-center h-screen gap-20 px-20 py-10">
       <div className="column-one w-1/2 h-full flex flex-col gap-3">
-        <div className="text flex-grow flex flex-col justify-center gap-3">
+        <div className="text flex-grow flex flex-col h-2/3 justify-center gap-3">
           <Header
             header={["You're in ", <br/>, "thief territory now."]}
           />

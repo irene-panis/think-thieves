@@ -6,10 +6,10 @@ import { Subheader } from "./Subheader";
 export const Pillars = () => {
   return (
     <div className="pillars-wrapper flex flex-col items-center h-screen px-20 gap-10">
-      <div className="text-section flex justify-end gap-20 border border-black">
+      <div className="text-section flex justify-end gap-20">
         <Subheader
           content="We're dedicated to excelling in esports, gaming, and content creation-- 100 Thieves' foundational pillars."
-          divStyles="w-1/2 justify-end items-end"
+          divStyles="w-1/2 justify-end items-end text-right"
           spanStyles="w-1/3"
         />
         <Header
@@ -17,7 +17,7 @@ export const Pillars = () => {
           divStyles="w-1/2"
         />
       </div>
-      <div className="img-section flex gap-10 border border-black">
+      <div className="img-section flex gap-10">
         <Image
           src="/lcs.jpeg"
         />
