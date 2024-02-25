@@ -19,16 +19,19 @@ export const Pillars = () => {
       </div>
       <div className="img-section w-full flex justify-evenly gap-10">
         <Image
-          src="/lcs.jpeg"
+          src="/redbull.jpeg"
           styles="w-1/3 h-3/4"
+          caption="Esports"
         />
         <Image
           src="/content.jpeg"
           styles="w-1/3"
+          caption="Content"
         />
         <Image
-          src="/apparel.jpeg"
+          src="/hoodie.jpeg"
           styles="w-1/3 h-2/3"
+          caption="Apparel"
         />
       </div>
     </div>

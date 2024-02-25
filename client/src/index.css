@@ -100,3 +100,7 @@
 .hero-wrapper h2 {
   font-size: clamp(1.5rem, 4.2vw, 5rem);
 }
+
+.img-caption {
+  font-size: clamp(1.5rem, 4.2vw, 5rem);
+}

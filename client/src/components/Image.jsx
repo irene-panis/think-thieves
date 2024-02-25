@@ -1,7 +1,16 @@
-export const Image = ({ src, styles }) => {
+export const Image = ( props ) => {
   return (
-    <div className={`img-wrapper flex flex-col ${styles}`}>
-      <img src={src} className="object-cover object-center w-full h-full rounded-md"></img>
+    <div className={`img-wrapper flex flex-col ${props.styles} relative overflow-hidden`}>
+      <img src={props.src} className={`object-cover w-full h-full rounded-md ${props.imgStyles}`}></img>
+      {
+        props.caption && (
+          <div
+            className="img-caption absolute bottom-[2rem] left-[0.9rem] text-white font-oswald font-bold uppercase text-2xl drop-shadow-md"
+          >
+            {props.caption}
+          </div>
+        )
+      }
     </div>
   )
 }
