@@ -5,7 +5,7 @@ export const Image = ( props ) => {
       {
         props.caption && (
           <div
-            className="img-caption absolute bottom-[2rem] left-[0.9rem] text-white font-oswald font-bold uppercase text-2xl drop-shadow-md"
+            className="img-caption absolute bottom-[2rem] left-[0.9rem] text-white font-oswald font-bold italic uppercase text-2xl drop-shadow-md"
           >
             {props.caption}
           </div>

@@ -102,5 +102,5 @@
 }
 
 .img-caption {
-  font-size: clamp(1.5rem, 4.2vw, 5rem);
+  font-size: clamp(1.5rem, 4vw, 5rem);
 }
