@@ -93,7 +93,7 @@
 
 * {
   box-sizing: border-box;
-  font-size: clamp(1rem, 0.8vw, 5rem);
+  font-size: clamp(1rem, 0.9vw, 5rem);
 }
 
 .text-wrapper > h2,
