@@ -8,9 +8,9 @@ export const Pillars = () => {
     <div className="pillars-wrapper flex flex-col items-center h-screen px-20 gap-10">
       <div className="text-section flex justify-end gap-20">
         <Subheader
-          content="We're dedicated to excelling in esports, gaming, and content creation-- 100 Thieves' foundational pillars."
-          divStyles="w-1/2 justify-end items-end text-right"
-          spanStyles="w-1/3"
+          content="What sets 100 Thieves apart from its competition is our dedication to excelling in our mainstay pillars: esports, content, and apparel. We're built by gamers, for gamers."
+          divStyles="w-1/2 justify-center items-center text-center"
+          spanStyles="w-2/3"
         />
         <Header
           header="Bridging the gap between fashion and gaming."

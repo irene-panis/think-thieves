@@ -12,7 +12,7 @@ export const About = () => {
             header={["You're in ", <br/>, "thief territory now."]}
           />
           <Subheader
-            content="The prime destination for esports and gaming content."
+            content="100 THIEVES is the premium lifestyle brand for the gaming generation."
             styles="justify-end text-md"
           />
         </div>

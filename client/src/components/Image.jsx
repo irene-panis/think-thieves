@@ -1,7 +1,7 @@
 export const Image = ( props ) => {
   return (
     <div className={`img-wrapper flex flex-col ${props.styles} relative overflow-hidden`}>
-      <img src={props.src} className={`object-cover w-full h-full rounded-md ${props.imgStyles}`}></img>
+      <img src={props.src} className={`object-cover w-full h-full rounded-sm ${props.imgStyles}`}></img>
       {
         props.caption && (
           <div
