@@ -1,5 +1,5 @@
 export const Apparel = () => {
   return (
-    <div></div>
+    <div>heyyyyyyy</div>
   )
 }
