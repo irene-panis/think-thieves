@@ -1,5 +1,5 @@
 export const Content = () => {
   return (
-    <div>heyyy</div>
+    <div className="pt-10">heyyy</div>
   )
 }

@@ -1,6 +1,6 @@
 export const Esports = () => {
   return (
-    <div>
+    <div className="pt-10">
       <span>test lol</span>
     </div>
   )
