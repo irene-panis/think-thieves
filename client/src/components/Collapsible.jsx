@@ -7,7 +7,7 @@ export const Collapsible = ( props ) => {
     const content = allColls.children[1];
     const apparel = allColls.children[2];
     switch (current) {
-      case 'Esports':
+      case 'ESPORTS':
         // remove active classes
         content.firstChild.classList.remove("active");
         apparel.firstChild.classList.remove("active");
@@ -15,14 +15,14 @@ export const Collapsible = ( props ) => {
         content.lastChild.style.maxHeight = null;
         apparel.lastChild.style.maxHeight = null;
         break;
-      case 'Content':
+      case 'CONTENT':
         // close esports and apparel
         esports.firstChild.classList.remove("active");
         apparel.firstChild.classList.remove("active");
         esports.lastChild.style.maxHeight = null;
         apparel.lastChild.style.maxHeight = null;
         break;
-      case 'Apparel':
+      case 'APPAREL':
         // close esports and content
         esports.firstChild.classList.remove("active");
         content.firstChild.classList.remove("active");
