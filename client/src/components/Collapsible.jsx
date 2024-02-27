@@ -45,9 +45,9 @@ export const Collapsible = ( props ) => {
   }
 
   return (
-    <div>
+    <div className="w-full">
       <button 
-        className="collapsible"
+        className="collapsible uppercase font-oswald font-bold text-black duration-200 ease-in-out"
         onClick={handleClick}
       >
         {props.header}

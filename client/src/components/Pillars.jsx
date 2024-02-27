@@ -8,7 +8,7 @@ export const Pillars = () => {
 
   return (
     <div className="pillars-wrapper flex flex-col items-center h-screen px-20 gap-10">
-      <div className="colls-wrapper">
+      <div className="colls-wrapper w-full">
         <Collapsible
           header="Esports"
           content={ <Esports/> }
