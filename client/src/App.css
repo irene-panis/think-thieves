@@ -111,8 +111,13 @@
   font-size: clamp(1.5rem, 4vw, 5rem);
 }
 
-.collapsible {
+.collapsible,
+.pill-temp-wrapper h2 {
   font-size: clamp(1.5rem, 3vw, 5rem);
+}
+
+.pillar-text {
+  font-size: clamp(1rem, 1vw, 5rem);
 }
 
 /* collapsible styling */

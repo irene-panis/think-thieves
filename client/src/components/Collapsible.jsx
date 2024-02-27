@@ -52,7 +52,7 @@ export const Collapsible = ( props ) => {
       >
         {props.header}
       </button>
-      <div className="coll-content">
+      <div className="coll-content h-full">
         {props.content}
       </div>
     </div>
