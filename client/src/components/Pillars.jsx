@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-key */
 import { Collapsible } from "./Collapsible"
-import { Esports } from "./Esports"
-import { Content } from "./Content"
-import { Apparel } from "./Apparel"
+import { Esports } from "./EsportsPillar"
+import { Content } from "./ContentPillar"
+import { Apparel } from "./ApparelPillar"
 
 export const Pillars = () => {
 
