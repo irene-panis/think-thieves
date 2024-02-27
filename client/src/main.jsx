@@ -6,10 +6,10 @@ import './App.css'
 
 import App from './App.jsx';
 import { Home } from './pages/Home.jsx';
-import { Esports } from './components/Esports.jsx';
-import { Content } from './components/Content.jsx';
-import { Apparel } from './components/Apparel.jsx';
-import Error from './views/pages/Error.jsx';
+import { Esports } from './pages/Esports.jsx';
+import { Content } from './pages/Content.jsx';
+import { Apparel } from './pages/Apparel.jsx';
+import { Error } from './pages/Error.jsx';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
