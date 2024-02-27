@@ -117,7 +117,7 @@
   width: 100%;
   text-align: left;
   outline: none;
-  border: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .active, .collapsible:hover {
