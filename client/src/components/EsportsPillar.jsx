@@ -2,7 +2,7 @@ import { PillarTemplate } from "./PillarTemplate"
 
 export const Esports = () => {
   return (
-    <div className="esports-wrapper h-[85vh]">
+    <div id="esports" className="esports-wrapper h-[85vh]">
       <PillarTemplate
         header="Dominating the competition, one Championship at a time."
         src="redbull.jpeg"
