@@ -14,7 +14,7 @@ export const PillarTemplate = ( props ) => {
           <p className="pillar-text">{props.p1}</p>
           <p className="pillar-text">{props.p2}</p>
           <button className="uppercase border border-black self-start py-2 px-2 hover:text-white hover:bg-black duration-300 ease-in-out">
-            <Link to="/esports">Learn More</Link>
+            <Link to={props.linkTo}>Learn More</Link>
           </button>
         </div>
       </div>
