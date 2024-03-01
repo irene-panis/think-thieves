@@ -116,6 +116,10 @@
   font-size: clamp(1.5rem, 3vw, 5rem);
 }
 
+.culture-head {
+  font-size: clamp(1.5rem, 2vw, 4rem);
+}
+
 .pillar-text {
   font-size: clamp(1rem, 1vw, 5rem);
 }
