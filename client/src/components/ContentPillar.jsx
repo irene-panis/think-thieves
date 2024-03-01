@@ -1,5 +1,14 @@
+import { PillarTemplate } from "./PillarTemplate"
+
 export const Content = () => {
   return (
-    <div id="content" className="pt-10">heyyy</div>
+    <div id="content" className="content-wrapper h-[85vh]">
+    <PillarTemplate
+      header="Creating unforgettable moments in gaming and culture."
+      src="lilnasx.jpeg"
+      p1="We bring forth some of the world’s best creators together in unique ways that captivate the internet."
+      p2="Through groundbreaking collaborations with influential figures like Lil Nas X and partnerships with top-tier content creators such as Kyedae and Fuslie, we're reshaping the landscape of digital entertainment and setting new standards for creativity and innovation."
+    />
+  </div>
   )
 }
