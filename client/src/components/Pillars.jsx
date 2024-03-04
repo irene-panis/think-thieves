@@ -8,7 +8,7 @@ import { Header } from "./Header"
 export const Pillars = () => {
 
   return (
-    <div className="pillars-wrapper flex flex-col px-20 pb-10">
+    <div className="pillars-wrapper flex flex-col px-20">
       <Header
         header="Our Pillars"
       />
