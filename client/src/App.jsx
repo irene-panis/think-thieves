@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 
 import { Hero } from './components/Hero';
+import { Footer } from './components/Footer';
 
 function App() {
   const current = useLocation().pathname;
@@ -25,6 +26,7 @@ function App() {
       <div className="w-full font-dmmono bg-[#F4F3F2]">
         <Outlet/>
       </div>
+      <Footer/>
     </div>
   )
 }
