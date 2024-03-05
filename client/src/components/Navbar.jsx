@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
+
+  useEffect(() => {
+    var nav = document.querySelector('.nav-items');
+    nav.style.display = 'none';
+  })
 
   const toggleNav = () => {
     var nav = document.querySelector('.nav-items');
