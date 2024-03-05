@@ -14,7 +14,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="nav-wrapper bg-white flex flex-col w-full justify-center items-center relative z-10 shadow-md p-4 gap-4">
+    <nav className="nav-wrapper bg-white flex flex-col w-full justify-center items-center absolute z-10 shadow-md p-4 gap-4">
       <div className="nav-icons w-full flex justify-between items-center">
         <img src='/TT_logo.png' height="50" width="50" className=""></img>
         <FontAwesomeIcon 
