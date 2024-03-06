@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-export const Navbar = () => {
+export const Navbar = (  ) => {
 
   useEffect(() => {
     var nav = document.querySelector('.nav-items');
@@ -20,7 +20,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="nav-wrapper bg-white flex flex-col w-full justify-center items-center absolute z-10 shadow-md p-4 gap-4">
+    <nav className={`nav-wrapper bg-white flex flex-col w-full justify-center items-center z-10 shadow-md p-4 h-16`}>
       <div className="nav-icons w-full flex justify-between items-center">
         <img src='/TT_logo.png' height="50" width="50" className=""></img>
         <FontAwesomeIcon 
@@ -28,7 +28,7 @@ export const Navbar = () => {
           onClick={toggleNav}
         />
       </div>
-      <ul className="nav-items text-black uppercase hidden text-center tracking-widest">
+      <ul className="nav-items text-black uppercase hidden text-center tracking-widest absolute top-0 left-0 w-full mt-16 bg-white py-2">
         <li className="px-1 hover:underline hover:bg-black hover:text-white">
           <Link to="/">Home</Link>
         </li>
