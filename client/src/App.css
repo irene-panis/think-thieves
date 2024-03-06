@@ -112,7 +112,7 @@ html,body {
 
 .text-wrapper > h2,
 .hero-wrapper h2 {
-  font-size: clamp(1.5rem, 4.2vw, 5rem);
+  font-size: clamp(2rem, 4.2vw, 5rem);
 }
 
 .img-caption {
