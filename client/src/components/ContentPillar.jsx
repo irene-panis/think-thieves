@@ -2,7 +2,7 @@ import { PillarTemplate } from "./PillarTemplate"
 
 export const Content = () => {
   return (
-    <div id="content" className="content-wrapper h-[85vh]">
+    <div id="content" className="content-wrapper">
     <PillarTemplate
       header="Creating unforgettable moments in gaming and culture."
       src="lilnasx.jpeg"

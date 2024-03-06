@@ -2,7 +2,7 @@ import { PillarTemplate } from "./PillarTemplate"
 
 export const Apparel = () => {
   return (
-    <div id="apparel" className="apparel-wrapper h-[85vh]">
+    <div id="apparel" className="apparel-wrapper">
     <PillarTemplate
       header="Bridging the gap between gaming and fashion."
       src="poke.jpeg"
