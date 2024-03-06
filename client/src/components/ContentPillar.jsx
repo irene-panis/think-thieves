@@ -1,6 +1,6 @@
 import { PillarTemplate } from "./PillarTemplate"
 
-export const Content = () => {
+export const ContentPillar = () => {
   return (
     <div id="content" className="content-wrapper">
     <PillarTemplate

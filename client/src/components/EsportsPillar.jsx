@@ -1,6 +1,6 @@
 import { PillarTemplate } from "./PillarTemplate"
 
-export const Esports = () => {
+export const EsportsPillar = () => {
   return (
     <div id="esports" className="esports-wrapper">
       <PillarTemplate
