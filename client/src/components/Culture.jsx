@@ -4,7 +4,7 @@ import { Subheader } from "./Subheader"
 
 export const Culture = ( ) => {
   return (
-    <div className="culture-wrapper flex flex-col gap-10 px-20">
+    <div className="culture-wrapper flex flex-col gap-10">
       <Header
         header="Our Culture"
       />
