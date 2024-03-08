@@ -1,6 +1,6 @@
 export const Subscribe = () => {
   return (
-    <div className="flex flex-col gap-5 w-[40%]">
+    <div className="flex flex-col gap-5">
       <span>Get the latest updates and promotions from 100 THIEVES!</span>
       <form action="/submit" method="post" className="uppercase">
         <label htmlFor="email" className="text-xs">Email:</label><br/>
