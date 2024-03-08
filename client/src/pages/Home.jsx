@@ -5,7 +5,7 @@ import { Partners } from "../components/Partners"
 
 export const Home = () => {
   return (
-    <div className="home-wrapper w-full h-full flex flex-col gap-20 py-20">
+    <div className="home-wrapper w-full h-full flex flex-col gap-20 py-20 px-5">
       <About/>
       <Pillars/>
       <Culture/>
