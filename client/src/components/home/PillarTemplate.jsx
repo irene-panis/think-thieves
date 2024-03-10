@@ -1,4 +1,4 @@
-import { Image } from "./Image"
+import { Image } from "../Image"
 import { Link } from "react-router-dom"
 
 export const PillarTemplate = ( props ) => {

@@ -1,6 +1,6 @@
-import { Header } from "./Header"
-import { Image } from "./Image"
-import { Subheader } from "./Subheader"
+import { Header } from "../Header"
+import { Image } from "../Image"
+import { Subheader } from "../Subheader"
 
 export const Partners = () => {
   return (

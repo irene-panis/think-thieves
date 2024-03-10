@@ -1,7 +1,7 @@
-import { About } from "../components/About"
-import { Pillars } from "../components/Pillars"
-import { Culture } from "../components/Culture"
-import { Partners } from "../components/Partners"
+import { About } from "../components/home/About"
+import { Pillars } from "../components/home/Pillars"
+import { Culture } from "../components/home/Culture"
+import { Partners } from "../components/home/Partners"
 
 export const Home = () => {
   return (

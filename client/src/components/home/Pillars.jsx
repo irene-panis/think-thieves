@@ -3,7 +3,7 @@ import { Collapsible } from "./Collapsible"
 import { EsportsPillar } from "./EsportsPillar"
 import { ContentPillar } from "./ContentPillar"
 import { ApparelPillar } from "./ApparelPillar"
-import { Header } from "./Header"
+import { Header } from "../Header"
 
 export const Pillars = () => {
 
