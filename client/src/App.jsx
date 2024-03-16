@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 
@@ -9,7 +10,12 @@ import { Footer } from './components/Footer';
 function App() {
   const current = useLocation().pathname;
   const page = current;
-  console.log(page);
+  
+  const [team, setTeam] = useState('VAL');
+
+  const handleTeamChange = (newTeam) => {
+    setTeam(newTeam);
+  }
 
   return (
     <div className="wrapper bg-gray-400 flex flex-col w-full">
@@ -24,7 +30,9 @@ function App() {
         (
           <div className="flex flex-col w-full h-screen relative">
             <Navbar/>
-            <SelectTeam/>
+            <SelectTeam
+              onTeamChange={handleTeamChange}
+            />
           </div>
         ) : (
           <Navbar/>
