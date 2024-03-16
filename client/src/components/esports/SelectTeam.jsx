@@ -9,7 +9,7 @@ export const SelectTeam = ( props ) => {
         <TeamButton onTeamChange={props.onTeamChange}>VAL</TeamButton>
       </div>
       <div className="h-full w-full flex flex-col justify-center items-center">
-       <TeamButton onTeamChange={props.onTeamChange}>LOL</TeamButton>
+        <TeamButton onTeamChange={props.onTeamChange}>LOL</TeamButton>
       </div>
       <div className="h-full w-full flex flex-col justify-center items-center">
         <TeamButton onTeamChange={props.onTeamChange}>CDL</TeamButton>
