@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = (  ) => {
+  const current = useLocation().pathname;
 
   useEffect(() => {
     var nav = document.querySelector('.nav-items');
     nav.style.display = 'none';
-  })
+  }, [current])
 
   const toggleNav = () => {
     var nav = document.querySelector('.nav-items');
@@ -20,7 +21,7 @@ export const Navbar = (  ) => {
   }
 
   return (
-    <nav className={`nav-wrapper bg-white flex flex-col w-full justify-center items-center z-10 shadow-md p-4 h-16`}>
+    <nav className={`nav-wrapper bg-white flex flex-col w-full justify-center items-center z-10 shadow-md p-4 h-16 sticky top-0`}>
       <div className="nav-icons w-full flex justify-between items-center">
         <img src='/TT_logo.png' height="50" width="50" className=""></img>
         <FontAwesomeIcon 
