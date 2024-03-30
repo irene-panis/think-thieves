@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Header } from "../Header"
 import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react"
