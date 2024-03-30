@@ -32,7 +32,7 @@ export const Team = ( props ) => {
       <Subheader
         content="Upcoming Matches"
       />
-      <div className="players">
+      <div className="players flex gap-2">
         {
           roster.map((player, index) => (
             <button 
