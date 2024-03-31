@@ -2,6 +2,7 @@
 import { Header } from "../Header"
 import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react"
+import { PlayerProfile } from "./PlayerProfile"
 
 export const Team = ( props ) => {
 
@@ -33,17 +34,9 @@ export const Team = ( props ) => {
       <Subheader
         content="Upcoming Matches"
       />
-      <div className="players flex gap-2">
-        {
-          roster.map((player, index) => (
-            <button 
-              type="button" 
-              key={index}
-              className="bg-white py-1 px-2 rounded-md border border-black"
-              >{player}</button>
-          ))
-        }
-      </div>
+      <PlayerProfile
+        roster={roster}
+      />
     </>
   )
 }
