@@ -6,9 +6,54 @@ import { PlayerProfile } from "./PlayerProfile"
 
 export const Team = ( props ) => {
 
-  const valRoster = ['Asuna', 'bang', 'Boostio', 'Cryo', 'eeiu'];
-  const leagueRoster = ['Eyla', 'Meech', 'Quid', 'River', 'Sniper'];
-  const cdlRoster = ['Ghosty', 'JoeDeceives', 'Kremp', 'Nastie'];
+  const valRoster = [
+    {
+      ign: 'Asuna'
+    },
+    {
+      ign: 'bang'
+    },
+    {
+      ign: 'Boostio'
+    },
+    {
+      ign: 'Cryo'
+    },
+    {
+      ign: 'eeiu'
+    }
+  ];
+  const leagueRoster = [
+    {
+      ign: 'Eyla'
+    },
+    {
+      ign: 'Meech'
+    },
+    {
+      ign: 'Quid'
+    },
+    {
+      ign: 'River'
+    },
+    {
+      ign: 'Sniper'
+    }
+  ];
+  const cdlRoster = [
+    {
+      ign: 'Ghosty'
+    },
+    {
+      ign: 'JoeDeceives'
+    },
+    {
+      ign: 'Kremp'
+    },
+    {
+      ign: 'Nastie'
+    }
+  ];
 
   const [roster, setRoster] = useState(valRoster);
 

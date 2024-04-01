@@ -27,12 +27,12 @@ export const PlayerProfile = ( props ) => {
               key={index}
               className="bg-white py-1 px-2 rounded-md border border-black"
             >
-              {player}
+              {player.ign}
             </button>
           ))
         }
       </div>
-      <span>Current player: {player}</span>
+      <span>Current player: {player.ign}</span>
     </>
   )
 }
