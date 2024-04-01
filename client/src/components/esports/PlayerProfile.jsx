@@ -1,5 +1,6 @@
 import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react"
+import { Image } from "../Image";
 
 export const PlayerProfile = ( props ) => {
 
@@ -33,6 +34,9 @@ export const PlayerProfile = ( props ) => {
         }
       </div>
       <span>Current player: {player.ign}</span>
+      <Image
+        src={player.img}
+      />
     </>
   )
 }

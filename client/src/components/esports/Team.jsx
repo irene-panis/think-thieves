@@ -8,19 +8,24 @@ export const Team = ( props ) => {
 
   const valRoster = [
     {
-      ign: 'Asuna'
+      ign: 'Asuna',
+      img: '/esports/asuna.jpeg'
     },
     {
-      ign: 'bang'
+      ign: 'bang',
+      img: '/esports/bang.jpeg'
     },
     {
-      ign: 'Boostio'
+      ign: 'Boostio',
+      img: '/esports/boostio.jpeg'
     },
     {
-      ign: 'Cryo'
+      ign: 'Cryo',
+      img: '/esports/cryo.jpeg'
     },
     {
-      ign: 'eeiu'
+      ign: 'eeiu',
+      img: '/esports/eeiu.jpeg'
     }
   ];
   const leagueRoster = [
