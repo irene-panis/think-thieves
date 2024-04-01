@@ -10,19 +10,19 @@ export const Partners = () => {
       />
       <div className="img-container flex flex-wrap justify-center align-center gap-10">
         <Image
-          src="att.png"
+          src="home/att.png"
           styles="w-auto h-[100px]"
         />
         <Image
-          src="gucci.png"
+          src="home/gucci.png"
           styles="w-auto h-[100px]"
         />
         <Image
-          src="heineken.png"
+          src="home/heineken.png"
           styles="w-auto h-[100px]"
         />
         <Image
-          src="lexus.png"
+          src="home/lexus.png"
           styles="w-auto h-[100px]"
         />
       </div>

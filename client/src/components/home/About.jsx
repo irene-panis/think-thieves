@@ -18,14 +18,14 @@ export const About = () => {
         </div>
         <div className="image-wrapper flex-grow overflow-hidden hidden">
           <Image
-            src="/codchamps.jpeg"
+            src="/home/codchamps.jpeg"
             styles="w-full h-full object-cover"
           />
         </div>
       </div>
       <div className="column-two h-full">
         <Image
-          src="/co-owners.jpeg"
+          src="/home/co-owners.jpeg"
           styles="h-full w-full"
         />
       </div>

@@ -10,15 +10,15 @@ export const Culture = ( ) => {
       />
       <div className="culture-imgs h-screen grid grid-cols-2 grid-rows-5 gap-5">
         <Image
-          src="/gucci.jpeg"
+          src="/home/gucci.jpeg"
           styles="col-start-1 col-span-2 row-span-2"
         />
         <Image
-          src="/trophy.jpeg"
+          src="/home/trophy.jpeg"
           styles="col-start-2 col-span-1 row-start-4 row-span-1"
         />
         <Image
-          src="/jjk.jpeg"
+          src="/home/jjk.jpeg"
           styles="col-start-4 col-span-1 row-start-3 row-span-1 hidden"
         />
         <Subheader
