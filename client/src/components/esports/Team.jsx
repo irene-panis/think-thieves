@@ -30,19 +30,24 @@ export const Team = ( props ) => {
   ];
   const leagueRoster = [
     {
-      ign: 'Eyla'
+      ign: 'Eyla',
+      img: '/esports/eyla.jpeg'
     },
     {
-      ign: 'Meech'
+      ign: 'Meech',
+      img: '/esports/meech.jpeg'
     },
     {
-      ign: 'Quid'
+      ign: 'Quid',
+      img: '/esports/quid.jpeg'
     },
     {
-      ign: 'River'
+      ign: 'River',
+      img: '/esports/river.jpeg'
     },
     {
-      ign: 'Sniper'
+      ign: 'Sniper',
+      img: '/esports/sniper.jpeg'
     }
   ];
   const cdlRoster = [
