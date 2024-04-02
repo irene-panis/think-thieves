@@ -52,16 +52,20 @@ export const Team = ( props ) => {
   ];
   const cdlRoster = [
     {
-      ign: 'Ghosty'
+      ign: 'Ghosty',
+      img: '/esports/ghosty.jpeg'
     },
     {
-      ign: 'JoeDeceives'
+      ign: 'JoeDeceives',
+      img: '/esports/joedeceives.jpeg'
     },
     {
-      ign: 'Kremp'
+      ign: 'Kremp',
+      img: '/esports/kremp.png'
     },
     {
-      ign: 'Nastie'
+      ign: 'Nastie',
+      img: '/esports/nastie.png'
     }
   ];
 
