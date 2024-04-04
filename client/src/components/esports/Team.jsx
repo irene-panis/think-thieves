@@ -9,63 +9,77 @@ export const Team = ( props ) => {
   const valRoster = [
     {
       ign: 'Asuna',
-      img: '/esports/asuna.jpeg'
+      img: '/esports/asuna.jpeg',
+      twitter: 'https://twitter.com/Asunaa'
     },
     {
       ign: 'bang',
-      img: '/esports/bang.jpeg'
+      img: '/esports/bang.jpeg',
+      twitter: 'https://twitter.com/bangzerra'
     },
     {
       ign: 'Boostio',
-      img: '/esports/boostio.jpeg'
+      img: '/esports/boostio.jpeg',
+      twitter: 'https://twitter.com/Boostio'
     },
     {
       ign: 'Cryo',
-      img: '/esports/cryo.jpeg'
+      img: '/esports/cryo.jpeg',
+      twitter: 'https://twitter.com/Cryocells_'
     },
     {
       ign: 'eeiu',
-      img: '/esports/eeiu.jpeg'
+      img: '/esports/eeiu.jpeg',
+      twitter: 'https://twitter.com/777eeiu'
     }
   ];
   const leagueRoster = [
     {
       ign: 'Eyla',
-      img: '/esports/eyla.jpeg'
+      img: '/esports/eyla.jpeg',
+      twitter: 'https://twitter.com/SupportEyla'
     },
     {
       ign: 'Meech',
-      img: '/esports/meech.jpeg'
+      img: '/esports/meech.jpeg',
+      twitter: 'https://twitter.com/Meechlol1'
     },
     {
       ign: 'Quid',
-      img: '/esports/quid.jpeg'
+      img: '/esports/quid.jpeg',
+      twitter: 'https://twitter.com/quidlolkr'
     },
     {
       ign: 'River',
-      img: '/esports/river.jpeg'
+      img: '/esports/river.jpeg',
+      twitter: 'https://twitter.com/lolRiver'
     },
     {
       ign: 'Sniper',
-      img: '/esports/sniper.jpeg'
+      img: '/esports/sniper.jpeg',
+      twitter: 'https://twitter.com/GeneralSniper'
     }
   ];
   const cdlRoster = [
     {
       ign: 'Ghosty',
-      img: '/esports/ghosty.jpeg'
+      img: '/esports/ghosty.jpeg',
+      twitter: 'https://twitter.com/oDanGhosty'
     },
     {
       ign: 'JoeDeceives',
-      img: '/esports/joedeceives.jpeg'
+      img: '/esports/joedeceives.jpeg',
+      twitter: 'https://twitter.com/JoeDeceives'
     },
     {
       ign: 'Kremp',
-      img: '/esports/kremp.png'
+      img: '/esports/kremp.png',
+      twitter: 'https://twitter.com/KrempV'
     },
     {
       ign: 'Nastie',
-      img: '/esports/nastie.png'
+      img: '/esports/nastie.png',
+      twitter: 'https://twitter.com/Nastiee_'
     }
   ];
 

@@ -9,7 +9,6 @@ export const PlayerProfile = ( props ) => {
   const handlePlayerChange = (newPlayer) => {
     setPlayer(newPlayer);
   }
-
   useEffect(() => {
     setPlayer(props.roster[0]);
   }, [props.roster]);
@@ -34,6 +33,7 @@ export const PlayerProfile = ( props ) => {
         }
       </div>
       <span>Current player: {player.ign}</span>
+      <span>@<a href={player.twitter} target='_blank'>{player.twitter.substring(20)}</a></span>
       <Image
         src={player.img}
       />
