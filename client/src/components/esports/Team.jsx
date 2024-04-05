@@ -10,76 +10,104 @@ export const Team = ( props ) => {
     {
       ign: 'Asuna',
       img: '/esports/asuna.jpeg',
-      twitter: 'https://twitter.com/Asunaa'
+      socials: [
+        { twitter: 'https://twitter.com/Asunaa' }
+      ]
     },
     {
       ign: 'bang',
       img: '/esports/bang.jpeg',
-      twitter: 'https://twitter.com/bangzerra'
+      socials: [
+        { twitter: 'https://twitter.com/bangzerra' }
+      ]
     },
     {
       ign: 'Boostio',
       img: '/esports/boostio.jpeg',
-      twitter: 'https://twitter.com/Boostio'
+      socials: [
+        { twitter: 'https://twitter.com/Boostio' }
+      ]
     },
     {
       ign: 'Cryo',
       img: '/esports/cryo.jpeg',
-      twitter: 'https://twitter.com/Cryocells_'
+      socials: [
+        { twitter: 'https://twitter.com/Cryocells_' }
+      ]
     },
     {
       ign: 'eeiu',
       img: '/esports/eeiu.jpeg',
-      twitter: 'https://twitter.com/777eeiu'
+      socials: [
+        { twitter: 'https://twitter.com/777eeiu' }
+      ]
     }
   ];
   const leagueRoster = [
     {
       ign: 'Eyla',
       img: '/esports/eyla.jpeg',
-      twitter: 'https://twitter.com/SupportEyla'
+      socials: [
+        { twitter: 'https://twitter.com/SupportEyla' }
+      ]
     },
     {
       ign: 'Meech',
       img: '/esports/meech.jpeg',
-      twitter: 'https://twitter.com/Meechlol1'
+      socials: [
+        { twitter: 'https://twitter.com/Meechlol1' }
+      ]
     },
     {
       ign: 'Quid',
       img: '/esports/quid.jpeg',
-      twitter: 'https://twitter.com/quidlolkr'
+      socials: [
+        { twitter: 'https://twitter.com/quidlolkr' }
+      ]
     },
     {
       ign: 'River',
       img: '/esports/river.jpeg',
-      twitter: 'https://twitter.com/lolRiver'
+      socials: [
+        { twitter: 'https://twitter.com/lolRiver' }
+      ]
     },
     {
       ign: 'Sniper',
       img: '/esports/sniper.jpeg',
-      twitter: 'https://twitter.com/GeneralSniper'
+      socials: [
+        { twitter: 'https://twitter.com/GeneralSniper' }
+      ]
     }
   ];
   const cdlRoster = [
     {
       ign: 'Ghosty',
       img: '/esports/ghosty.jpeg',
-      twitter: 'https://twitter.com/oDanGhosty'
+      socials: [
+        { twitter: 'https://twitter.com/oDanGhosty' }
+      ]
     },
     {
       ign: 'JoeDeceives',
       img: '/esports/joedeceives.jpeg',
-      twitter: 'https://twitter.com/JoeDeceives'
+      socials: [
+        { twitter: 'https://twitter.com/JoeDeceives' }
+      ]
     },
     {
       ign: 'Kremp',
       img: '/esports/kremp.png',
-      twitter: 'https://twitter.com/KrempV'
+      socials: [
+        { twitter: 'https://twitter.com/KrempV' }
+      ]
     },
     {
       ign: 'Nastie',
       img: '/esports/nastie.png',
-      twitter: 'https://twitter.com/Nastiee_'
+      socials: [
+        { twitter: 'https://twitter.com/Nastiee_' }
+      ]
     }
   ];
 
