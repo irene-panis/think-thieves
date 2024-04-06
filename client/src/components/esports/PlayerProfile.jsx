@@ -35,17 +35,19 @@ export const PlayerProfile = ( props ) => {
           ))
         }
       </div>
-      <span>Current player: {player.ign}</span>
-      {
-        playerSocials.map((social, index) => (
-          <span key={index}>
-            {social.platform}: {social.link}
-          </span>
-        ))
-        }
-      <Image
-        src={player.img}
-      />
+      <div className="player-profile flex flex-col">
+        <span>Current player: {player.ign}</span>
+        {
+          playerSocials.map((social, index) => (
+            <span key={index}>
+              {social.platform}: {social.link}
+            </span>
+          ))
+          }
+        <Image
+          src={player.img}
+        />
+      </div>
     </>
   )
 }
