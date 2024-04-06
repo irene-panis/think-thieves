@@ -4,14 +4,17 @@ import { Image } from "../Image";
 
 export const PlayerProfile = ( props ) => {
 
-  const [player, setPlayer] = useState('');
+  const [player, setPlayer] = useState(props.roster[0]);
 
   const handlePlayerChange = (newPlayer) => {
     setPlayer(newPlayer);
   }
+
   useEffect(() => {
     setPlayer(props.roster[0]);
   }, [props.roster]);
+
+  const playerSocials = player.socials;
 
   return (
     <>
@@ -33,7 +36,13 @@ export const PlayerProfile = ( props ) => {
         }
       </div>
       <span>Current player: {player.ign}</span>
-      <span>@<a href={player.twitter} target='_blank'>{player.twitter.substring(20)}</a></span>
+      {
+        playerSocials.map((social, index) => (
+          <span key={index}>
+            {social.platform}: {social.link}
+          </span>
+        ))
+        }
       <Image
         src={player.img}
       />
