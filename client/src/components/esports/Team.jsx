@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Header } from "../Header"
-import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react"
 import { PlayerProfile } from "./PlayerProfile"
+import { UpcomingMatches } from "./UpcomingMatches"
 
 export const Team = ( props ) => {
 
@@ -146,9 +146,7 @@ export const Team = ( props ) => {
       <Header
         header={props.name}
       />
-      <Subheader
-        content="Upcoming Matches"
-      />
+      <UpcomingMatches/>
       <PlayerProfile
         roster={roster}
       />
