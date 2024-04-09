@@ -9,7 +9,11 @@ export const About = () => {
       <div className="column-one h-full flex flex-col gap-3">
         <div className="text flex-grow flex flex-col h-2/3 justify-center items-center gap-3 text-center">
           <Header
-            header={["You're in ", <br/>, "thief territory now."]}
+            header={
+              <>
+                You're in <br/> thief territory now.
+              </>
+            }
           />
           <Subheader
             content="100 THIEVES is the premium lifestyle brand for the gaming generation."
