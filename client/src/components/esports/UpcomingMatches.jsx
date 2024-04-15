@@ -7,6 +7,7 @@ export const UpcomingMatches = ( props ) => {
 
   useEffect(() => {
     const getMatches = async () => {
+      // change this url based on team prop
       const getURL = "http://localhost:3001/api/get-val";
       const response = await fetch(getURL, {
         method: "GET",
@@ -19,7 +20,7 @@ export const UpcomingMatches = ( props ) => {
       setUpcoming(matches);
     };
     getMatches();
-  }, [props.name]);
+  }, [props.team]);
 
   return (
     <>
