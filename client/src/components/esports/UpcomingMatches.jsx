@@ -1,7 +1,7 @@
 import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react";
 
-export const UpcomingMatches = () => {
+export const UpcomingMatches = ( props ) => {
 
   const [upcoming, setUpcoming] = useState([]);
 
@@ -19,14 +19,20 @@ export const UpcomingMatches = () => {
       setUpcoming(matches);
     };
     getMatches();
-  }, []);
+  }, [props.name]);
 
   return (
     <>
       <Subheader
           content="Upcoming Matches"
       />
-      <span>{upcoming}</span>
+      <div className="team-list flex flex-col">
+        {
+          upcoming.map((team, index) => (
+            <span key={index}>{team}</span>
+          ))
+        }
+      </div>
     </>
   )
 }

@@ -146,7 +146,9 @@ export const Team = ( props ) => {
       <Header
         header={props.name}
       />
-      <UpcomingMatches/>
+      <UpcomingMatches
+        team={props.name}
+      />
       <PlayerProfile
         roster={roster}
       />
