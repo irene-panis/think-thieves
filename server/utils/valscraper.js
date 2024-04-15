@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 
 const getValMatches = async () => {
+
   const browser = await puppeteer.launch();
 
   const page = await browser.newPage();
@@ -23,9 +24,9 @@ const getValMatches = async () => {
     matchList.forEach((match) => {
       const team = match.querySelector("div.m-item-team.mod-right > span.m-item-team-name");
       const teamName = team.innerText;
-      matchData.push({ teamName });
-  });
-
+      matchData.push(teamName);
+    });
+  
     return matchData;
   });
 
