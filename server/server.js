@@ -17,7 +17,21 @@ const client = await createClient()
 
 app.get('/api/get-val', async (req, res) => {
   try {
+    client.flushDb(); // start with fresh db (for testing purposes for now)
     const data = await getValMatches();
+    data.forEach((match) => {
+      const matchId = match.name + " - " + match.date;
+      const matchData = {
+        team: match.name,
+        date: match.date,
+        event: match.event
+      };
+      try {
+        client.hSet(matchId, matchData);
+      } catch (err) {
+        return console.error(err);
+      }
+    });
     res.json(data);
   } catch (error) {
     res.status(500).json({ message: error.message });
