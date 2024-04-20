@@ -15,12 +15,17 @@ const client = await createClient()
   .on('error', err => console.log('Redis Client Error', err))
   .connect();
 
+let matchNumber = 0; // start matchNumber at 0
+// this is for uniquely identifying matches
+// handles edge case of matches against same team on same day etc
+
 app.get('/api/get-val', async (req, res) => {
   try {
     client.flushDb(); // start with fresh db (for testing purposes for now)
     const data = await getValMatches();
     data.forEach((match) => {
-      const matchId = match.name + " - " + match.date;
+      const matchId = match.name + matchNumber;
+      matchNumber++; // count up
       const matchData = {
         team: match.name,
         date: match.date,
