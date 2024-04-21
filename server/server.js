@@ -24,7 +24,7 @@ app.get('/api/get-val', async (req, res) => {
     client.flushDb(); // start with fresh db (for testing purposes for now)
     const data = await getValMatches();
     data.forEach((match) => {
-      const matchId = match.name + matchNumber;
+      const matchId = match.name + " " + matchNumber;
       matchNumber++; // count up
       const matchData = {
         team: match.name,
