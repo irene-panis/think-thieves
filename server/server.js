@@ -22,6 +22,7 @@ let matchNumber = 0; // start matchNumber at 0
 app.get('/api/get-val', async (req, res) => {
   try {
     client.flushDb(); // start with fresh db (for testing purposes for now)
+    // add redis check and grabbing from cache
     const data = await getValMatches();
     data.forEach((match) => {
       const matchId = match.name + " " + matchNumber;
