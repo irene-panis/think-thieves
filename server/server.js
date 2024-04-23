@@ -21,36 +21,33 @@ let matchNumber = 0; // start matchNumber at 0
 
 app.get('/api/get-val', async (req, res) => {
   // add redis check and grabbing from cache
-  client.hGetAll("VALORANT", async (err, cache) => {
-    // for some reason this isnt running at all, no console logs showing
-    // but simple sets/gets without callback functions work ???? idk man
-    if (err) console.error(err);
-    if (cache != null) {
-      const matchesArray = JSON.parse(cache.matches);
-      console.log("Cache Hit");
-      return res.json(matchesArray);
-    } else {
-      const data = await getValMatches();
-      const matches = [];
-      data.forEach((match) => {
-        const matchId = match.name + " " + matchNumber;
-        matchNumber++; // count up
-        const matchData = {
-          team: match.name,
-          date: match.date,
-          event: match.event
-        };
-        matches.push({
-          matchId: matchId,
-          matchData: matchData
-        });
+  const cache = await client.hGetAll("VALORANT");
+  if (Object.keys(cache).length !== 0) { // cache contains data, grab from redis
+    const matchesArray = JSON.parse(cache.matches);
+    console.log(matchesArray);
+    console.log("Cache Hit");
+    return res.json(matchesArray);
+  } else {
+    const data = await getValMatches();
+    const matches = [];
+    data.forEach((match) => {
+      const matchId = match.name + " " + matchNumber;
+      matchNumber++; // count up
+      const matchData = {
+        team: match.name,
+        date: match.date,
+        event: match.event
+      };
+      matches.push({
+        matchId: matchId,
+        matchData: matchData
       });
-      client.hSet("VALORANT", "matches", JSON.stringify(matches));
-      client.expire("VALORANT", 60);
-      console.log("Cache Miss");
-      return res.json(data);
-    }
-  })
+    });
+    client.hSet("VALORANT", "matches", JSON.stringify(matches));
+    client.expire("VALORANT", 60);
+    console.log("Cache Miss");
+    return res.json(data);
+  }
 });
 
 app.listen(PORT, () => {
