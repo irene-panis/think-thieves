@@ -23,8 +23,11 @@ app.get('/api/get-val', async (req, res) => {
   // add redis check and grabbing from cache
   const cache = await client.hGetAll("VALORANT");
   if (Object.keys(cache).length !== 0) { // cache contains data, grab from redis
-    const matchesArray = JSON.parse(cache.matches);
-    console.log(matchesArray);
+    const matchesArray = [];
+    const matchesField = JSON.parse(cache.matches);
+    matchesField.forEach((match) => {
+      matchesArray.push(match.matchData);
+    });
     console.log("Cache Hit");
     return res.json(matchesArray);
   } else {
@@ -33,14 +36,9 @@ app.get('/api/get-val', async (req, res) => {
     data.forEach((match) => {
       const matchId = match.name + " " + matchNumber;
       matchNumber++; // count up
-      const matchData = {
-        team: match.name,
-        date: match.date,
-        event: match.event
-      };
       matches.push({
         matchId: matchId,
-        matchData: matchData
+        matchData: match
       });
     });
     client.hSet("VALORANT", "matches", JSON.stringify(matches));
