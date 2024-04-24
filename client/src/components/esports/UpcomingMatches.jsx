@@ -33,7 +33,7 @@ export const UpcomingMatches = ( props ) => {
         ) : (
           upcoming.map((team, index) => (
             <div className="team flex flex-col border border-black shadow-md" key={index}>
-              <span>{team.name}</span>
+              <span className="font-bold uppercase">{team.name}</span>
               <span>{team.date}</span>
               <span>{team.event}</span>
             </div>
