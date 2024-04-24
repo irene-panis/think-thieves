@@ -28,7 +28,9 @@ export const UpcomingMatches = ( props ) => {
           content="Upcoming Matches"
       />
       <div className="team-list flex flex-col">
-        {
+        {upcoming.length === 0 ? (
+          <div>No upcoming matches</div>
+        ) : (
           upcoming.map((team, index) => (
             <div className="team flex flex-col" key={index}>
               <span>{team.name}</span>
@@ -36,7 +38,7 @@ export const UpcomingMatches = ( props ) => {
               <span>{team.event}</span>
             </div>
           ))
-        }
+        )}
       </div>
     </>
   )
