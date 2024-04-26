@@ -23,7 +23,7 @@ const getValMatches = async () => {
 
     matchList.forEach((match) => {
       const teamName = match.querySelector("div.m-item-team.mod-right > span.m-item-team-name").innerText;
-      const matchDate = match.querySelector("div.m-item-date > div").innerText;
+      const matchDate = match.querySelector("div.m-item-date").innerText;
       const eventTitle = match.querySelector("div.m-item-event").innerText;
       matchData.push(
         {
