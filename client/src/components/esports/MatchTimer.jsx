@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { convertTimeFormat } from '../../../../server/utils/timeConverter';
+import { adjustToPacific } from '../../../../server/utils/timezoneAdjust';
 
 export const MatchTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
     const formattedDate = convertTimeFormat(targetDate);
-    const difference = new Date(formattedDate) - new Date();
+    const pacificDate = adjustToPacific(formattedDate);
+    const difference = new Date(pacificDate) - new Date();
     let timeLeft = {};
 
     if (difference > 0) {
