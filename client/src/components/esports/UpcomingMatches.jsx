@@ -1,4 +1,5 @@
 import { Subheader } from "../Subheader"
+import { MatchTimer } from "./MatchTimer";
 import { useState, useEffect } from "react";
 
 export const UpcomingMatches = ( props ) => {
@@ -22,11 +23,14 @@ export const UpcomingMatches = ( props ) => {
     getMatches();
   }, [props.team]);
 
+  const testDate = "2024/05/03 2:00pm";
+
   return (
     <>
       <Subheader
           content="Upcoming Matches"
       />
+      <MatchTimer targetDate={testDate}/>
       <div className="team-list flex flex-col gap-2">
         {upcoming.length === 0 ? (
           <div>No upcoming matches</div>
