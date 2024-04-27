@@ -23,14 +23,11 @@ export const UpcomingMatches = ( props ) => {
     getMatches();
   }, [props.team]);
 
-  const testDate = "2024/05/03 2:00pm";
-
   return (
     <>
       <Subheader
           content="Upcoming Matches"
       />
-      <MatchTimer targetDate={testDate}/>
       <div className="team-list flex flex-col gap-2">
         {upcoming.length === 0 ? (
           <div>No upcoming matches</div>
@@ -40,6 +37,7 @@ export const UpcomingMatches = ( props ) => {
               <span className="font-bold uppercase">{team.name}</span>
               <span>{team.date}</span>
               <span>{team.event}</span>
+              <MatchTimer targetDate={team.date}/>
             </div>
           ))
         )}
