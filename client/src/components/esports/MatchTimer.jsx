@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { convertTimeFormat } from '../../../../server/utils/timeConverter';
 
 export const MatchTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
-    const difference = new Date(targetDate) - new Date();
+    const formattedDate = convertTimeFormat(targetDate);
+    const difference = new Date(formattedDate) - new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -29,16 +31,11 @@ export const MatchTimer = ({ targetDate }) => {
 
   return (
     <div>
-      {timeLeft.days > 0 && (
-        <div>
-          {timeLeft.days} {timeLeft.days === 1 ? 'day' : 'days'}{' '}
-        </div>
-      )}
-      <div>
-        {('0' + timeLeft.hours).slice(-2)}:
-        {('0' + timeLeft.minutes).slice(-2)}:
-        {('0' + timeLeft.seconds).slice(-2)}
-      </div>
+      {timeLeft.days}:
+      {('0' + timeLeft.hours).slice(-2)}:
+      {('0' + timeLeft.minutes).slice(-2)}:
+      {('0' + timeLeft.seconds).slice(-2)}
     </div>
   );
 }
+
