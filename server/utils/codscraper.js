@@ -5,7 +5,7 @@ const getValMatches = async () => {
   const browser = await puppeteer.launch();
 
   const page = await browser.newPage();
-  
+  // test
   // https://www.vlr.gg/team/matches/120/100-thieves/?group=completed
   // https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming
   const url = 'https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming';
