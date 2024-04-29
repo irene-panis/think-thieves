@@ -9,7 +9,19 @@ export const UpcomingMatches = ( props ) => {
   useEffect(() => {
     const getMatches = async () => {
       // change this url based on team prop
-      const getURL = "http://localhost:3001/api/get-val";
+      let endpoint;
+      switch (props.team) {
+        case 'VALORANT':
+          endpoint = 'get-val';
+          break;
+        case 'LEAGUE OF LEGENDS':
+          endpoint = 'get-lol';
+          break;
+        case 'CALL OF DUTY':
+          endpoint = 'get-cod';
+          break;
+      }
+      const getURL = `http://localhost:3001/api/${endpoint}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
