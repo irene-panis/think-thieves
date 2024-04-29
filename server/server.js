@@ -4,6 +4,7 @@ import getValMatches from './utils/valscraper.js';
 dotenv.config();
 import cors from "cors";
 import { createClient } from 'redis';
+import getLeagueMatches from "./utils/leaguescraper.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -46,6 +47,12 @@ app.get('/api/get-val', async (req, res) => {
     console.log("Cache Miss");
     return res.json(data);
   }
+});
+
+app.get('/api/get-lol', async (req, res) => {
+  const data = await getLeagueMatches();
+  console.log(data);
+  return res.json(data);
 });
 
 app.listen(PORT, () => {
