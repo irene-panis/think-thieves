@@ -4,7 +4,9 @@ const getLeagueMatches = async () => {
   // grab data
   // test endpoint for populated upcoming matches container:
   // https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=WAP%20Esports&prop=text
-  const endpoint = 'https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=100%20Thieves&prop=text';
+  // 100t endpoint
+  // https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=100%20Thieves&prop=text
+  const endpoint = 'https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=WAP%20Esports&prop=text';
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {
