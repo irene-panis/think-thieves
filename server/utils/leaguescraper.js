@@ -1,45 +1,42 @@
-import puppeteer from "puppeteer";
+const getLeagueMatches = async () => {
+  // grab data
+  const endpoint = 'https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=100%20Thieves&prop=text';
+  const response = await fetch(endpoint);
+  const data = await response.json();
 
-const getValMatches = async () => {
+  // table parsing
+  const parsedText = data.parse.text['*'];
+  var content = document.createElement('div'); // create dummy DOM element
+  content.innerHTML = parsedText;
+  const upcomingMatches = content.querySelector('.fo-nttax-infobox.panel'); // upcoming matches container
+  const matchesArray = upcomingMatches.querySelectorAll('tbody'); // all individual match rows
 
-  const browser = await puppeteer.launch();
+  const matches = []; // array to push data into
 
-  const page = await browser.newPage();
-  
-  // https://www.vlr.gg/team/matches/120/100-thieves/?group=completed
-  // https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming
-  const url = 'https://www.vlr.gg/team/matches/120/100-thieves/?group=upcoming';
+  matchesArray.forEach((match) => {
+    // grab team name
+    const teamName = match.querySelector('.team-right > span span.team-template-text > a').getAttribute('title');
 
-  await page.goto(url, {
-    waitUntil: "domcontentloaded",
+    // grab match date
+    const timerObj = match.querySelector('.timer-object').innerHTML;
+    const replaced = timerObj.replace(" -", "");
+    const testIndex = replaced.indexOf(" <");
+    const matchDate = replaced.substring(0, testIndex) + ":00";
+
+    // grab event name
+    const eventName = match.querySelector('.tournament-text > a').innerHTML;
+
+    const matchObj = {
+      team: teamName,
+      match: matchDate,
+      event: eventName
+    }
+
+    matches.push(matchObj);
   });
 
-  const matches = await page.evaluate(() => {
-    const matchList = Array.from(document.querySelectorAll("a.wf-card.m-item")).slice(0, 10);
-
-    if (matchList.length === 0) { return 'No matches found'; }
-
-    const matchData = [];
-
-    matchList.forEach((match) => {
-      const teamName = match.querySelector("div.m-item-team.mod-right > span.m-item-team-name").innerText;
-      const matchDate = match.querySelector("div.m-item-date").innerText;
-      const eventTitle = match.querySelector("div.m-item-event").innerText;
-      matchData.push(
-        {
-          name: teamName,
-          date: matchDate,
-          event: eventTitle
-        }
-      );
-    });
-  
-    return matchData;
-  });
-
-  await browser.close();
-
+  console.log(matches);
   return matches;
 };
 
-export default getValMatches;
+export default getLeagueMatches;
