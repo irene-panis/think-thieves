@@ -4,7 +4,12 @@ import { adjustToPacific } from '../../../../server/utils/timezoneAdjust';
 
 export const MatchTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
-    const formattedDate = convertTimeFormat(targetDate);
+    let formattedDate = targetDate;
+    const containsAM = formattedDate.toLowerCase().includes('am');
+    const containsPM = formattedDate.toLowerCase().includes('pm');
+    if (containsAM || containsPM) {
+      formattedDate = convertTimeFormat(targetDate); // convert time to 00:00:00
+    }
     const pacificDate = adjustToPacific(formattedDate);
     const difference = new Date(pacificDate) - new Date();
     let timeLeft = {};
