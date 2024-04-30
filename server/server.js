@@ -5,6 +5,7 @@ dotenv.config();
 import cors from "cors";
 import { createClient } from 'redis';
 import getLeagueMatches from "./utils/leaguescraper.js";
+import getCodMatches from "./utils/codscraper.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -51,6 +52,11 @@ app.get('/api/get-val', async (req, res) => {
 
 app.get('/api/get-lol', async (req, res) => {
   const data = await getLeagueMatches();
+  return res.json(data);
+});
+
+app.get('/api/get-cod', async (req, res) => {
+  const data = await getCodMatches();
   return res.json(data);
 });
 
