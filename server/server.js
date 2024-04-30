@@ -51,7 +51,6 @@ app.get('/api/get-val', async (req, res) => {
 
 app.get('/api/get-lol', async (req, res) => {
   const data = await getLeagueMatches();
-  console.log(data);
   return res.json(data);
 });
 

@@ -1,5 +1,6 @@
 import { Subheader } from "../Subheader"
 import { MatchTimer } from "./MatchTimer";
+import formatDate from "../../../../server/utils/dateFormatter";
 import { useState, useEffect } from "react";
 
 export const UpcomingMatches = ( props ) => {
@@ -47,7 +48,7 @@ export const UpcomingMatches = ( props ) => {
           upcoming.map((team, index) => (
             <div className="team flex flex-col border border-black shadow-md" key={index}>
               <span className="font-bold uppercase">{team.name}</span>
-              <span>{team.date}</span>
+              <span>{formatDate(team.date)}</span>
               <span>{team.event}</span>
               <MatchTimer targetDate={team.date}/>
             </div>
