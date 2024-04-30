@@ -1,4 +1,5 @@
 import { JSDOM } from 'jsdom';
+import formatName from './nameFormatter.js';
 
 const getLeagueMatches = async () => {
   // grab data
@@ -58,7 +59,7 @@ const getLeagueMatches = async () => {
     const eventName = match.querySelector('.tournament-text > a').innerHTML;
 
     const matchObj = {
-      name: teamName,
+      name: formatName(teamName),
       date: matchDate,
       event: eventName
     }
