@@ -58,7 +58,7 @@ const getLeagueMatches = async () => {
     const eventName = match.querySelector('.tournament-text > a').innerHTML;
 
     const matchObj = {
-      team: teamName,
+      name: teamName,
       date: matchDate,
       event: eventName
     }
