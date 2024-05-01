@@ -61,7 +61,7 @@ const getCodMatches = async () => {
 
     const matchObj = {
       name: formatName(teamName),
-      date: convertToUtc(matchDate),
+      date: convertToUtc(matchDate, "UTC+0700"),
       event: eventName
     }
 
