@@ -1,5 +1,6 @@
 import { JSDOM } from 'jsdom';
 import formatName from './nameFormatter.js';
+import convertToUtc from './utcConverter.js';
 
 const getLeagueMatches = async () => {
   // grab data
@@ -60,7 +61,7 @@ const getLeagueMatches = async () => {
 
     const matchObj = {
       name: formatName(teamName),
-      date: matchDate,
+      date: convertToUtc(matchDate),
       event: eventName
     }
 
