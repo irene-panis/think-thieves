@@ -1,7 +1,7 @@
 import { JSDOM } from 'jsdom';
 import formatName from './nameFormatter.js';
 import convertToUtc from './utcConverter.js';
-import { leagueData as data } from './matchData.js'; 
+import { leagueDataReal as data } from './matchData.js'; 
 import { calcExpiration } from './calcExpiration.js';
 
 const getLeagueMatches = async () => {
