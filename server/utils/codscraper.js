@@ -48,11 +48,14 @@ const getCodMatches = async () => {
     // grab event name
     const eventName = match.querySelector('.tournament-text > a').innerHTML;
 
+    // grab timezone
+    const timezone = match.querySelector('.timer-object abbr').getAttribute('data-tz');
+
     const matchObj = {
       name: formatName(teamName),
-      date: convertToUtc(matchDate, "UTC+0700"),
+      date: convertToUtc(matchDate, timezone),
       event: eventName,
-      exp: calcExpiration(matchDate, "UTC+0700")
+      exp: calcExpiration(matchDate, timezone)
     }
 
     matches.push(matchObj);
