@@ -1,6 +1,6 @@
-const convertToUtc = (input) => {
+const convertToUtc = (input, tz) => {
   // assuming incoming date is from +2 timezone
-  return new Date(input + " GMT+0200");
+  return new Date(input + " " + tz);
 }
 
 export default convertToUtc;
