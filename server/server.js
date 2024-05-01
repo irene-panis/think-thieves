@@ -63,6 +63,14 @@ app.get('/api/get-lol', async (req, res) => {
     return res.json(matchesArray);
   } else {
     const data = await getLeagueMatches();
+    if (data.length === 0) { // if no upcoming matches we set LoL matches to empty array
+      client.hSet("LoL", "matches", "[]");
+      client.expire("LoL", 86400); // expires after 1 day
+      // we basically want the empty array to be remembered/cached
+      // but we have no info on nearest match time bc no matches so just set exp = 1 day
+      console.log("Cache Miss - LoL");
+      return res.json(data);
+    }
     const matches = [];
     data.forEach((match) => {
       const matchId = match.name + " " + matchNumber;
@@ -73,7 +81,8 @@ app.get('/api/get-lol', async (req, res) => {
       });
     });
     client.hSet("LoL", "matches", JSON.stringify(matches));
-    client.expire("LoL", Math.floor(matches[0].matchData.exp));
+    client.expire("LoL", Math.floor(matches[0].matchData.exp)); // set expiration to nearest match time
+    // cache expires after nearest match arrives
     console.log("Cache Miss - LoL");
     return res.json(data);
   }
@@ -92,6 +101,12 @@ app.get('/api/get-cod', async (req, res) => {
     return res.json(matchesArray);
   } else {
     const data = await getCodMatches();
+    if (data.length === 0) {
+      client.hSet("COD", "matches", "[]");
+      client.expire("COD", 86400);
+      console.log("Cache Miss - COD");
+      return res.json(data);
+    }
     const matches = [];
     data.forEach((match) => {
       const matchId = match.name + " " + matchNumber;
