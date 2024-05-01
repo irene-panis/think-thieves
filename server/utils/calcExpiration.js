@@ -1,4 +1,4 @@
-import convertToUtc from "./utcConverter"
+import convertToUtc from "./utcConverter.js"
 
 export const calcExpiration = (date, tz) => {
   const utc = convertToUtc(date, tz);
