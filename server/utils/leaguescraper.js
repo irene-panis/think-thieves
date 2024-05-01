@@ -2,6 +2,7 @@ import { JSDOM } from 'jsdom';
 import formatName from './nameFormatter.js';
 import convertToUtc from './utcConverter.js';
 import { leagueData as data } from './matchData.js'; 
+import { calcExpiration } from './calcExpiration.js';
 
 const getLeagueMatches = async () => {
   // grab data
@@ -53,7 +54,8 @@ const getLeagueMatches = async () => {
     const matchObj = {
       name: formatName(teamName),
       date: convertToUtc(matchDate, "UTC+0200"),
-      event: eventName
+      event: eventName,
+      exp: calcExpiration(matchDate, "UTC+0200")
     }
 
     matches.push(matchObj);
