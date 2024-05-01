@@ -30,7 +30,7 @@ app.get('/api/get-val', async (req, res) => {
     matchesField.forEach((match) => {
       matchesArray.push(match.matchData);
     });
-    console.log("Cache Hit");
+    console.log("Cache Hit - VALORANT");
     return res.json(matchesArray);
   } else {
     const data = await getValMatches();
@@ -45,19 +45,67 @@ app.get('/api/get-val', async (req, res) => {
     });
     client.hSet("VALORANT", "matches", JSON.stringify(matches));
     client.expire("VALORANT", 60);
-    console.log("Cache Miss");
+    console.log("Cache Miss - VALORANT");
     return res.json(data);
   }
 });
 
 app.get('/api/get-lol', async (req, res) => {
-  const data = await getLeagueMatches();
-  return res.json(data);
+  // add redis check and grabbing from cache
+  const cache = await client.hGetAll("LoL");
+  if (Object.keys(cache).length !== 0) { // cache contains data, grab from redis
+    const matchesArray = [];
+    const matchesField = JSON.parse(cache.matches);
+    matchesField.forEach((match) => {
+      matchesArray.push(match.matchData);
+    });
+    console.log("Cache Hit - LoL");
+    return res.json(matchesArray);
+  } else {
+    const data = await getLeagueMatches();
+    const matches = [];
+    data.forEach((match) => {
+      const matchId = match.name + " " + matchNumber;
+      matchNumber++; // count up
+      matches.push({
+        matchId: matchId,
+        matchData: match
+      });
+    });
+    client.hSet("LoL", "matches", JSON.stringify(matches));
+    client.expire("LoL", Math.floor(matches[0].matchData.exp));
+    console.log("Cache Miss - LoL");
+    return res.json(data);
+  }
 });
 
 app.get('/api/get-cod', async (req, res) => {
-  const data = await getCodMatches();
-  return res.json(data);
+  // add redis check and grabbing from cache
+  const cache = await client.hGetAll("COD");
+  if (Object.keys(cache).length !== 0) { // cache contains data, grab from redis
+    const matchesArray = [];
+    const matchesField = JSON.parse(cache.matches);
+    matchesField.forEach((match) => {
+      matchesArray.push(match.matchData);
+    });
+    console.log("Cache Hit - COD");
+    return res.json(matchesArray);
+  } else {
+    const data = await getCodMatches();
+    const matches = [];
+    data.forEach((match) => {
+      const matchId = match.name + " " + matchNumber;
+      matchNumber++; // count up
+      matches.push({
+        matchId: matchId,
+        matchData: match
+      });
+    });
+    client.hSet("COD", "matches", JSON.stringify(matches));
+    client.expire("COD", Math.floor(matches[0].matchData.exp));
+    console.log("Cache Miss - COD");
+    return res.json(data);
+  }
 });
 
 app.listen(PORT, () => {
