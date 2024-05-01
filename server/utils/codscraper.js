@@ -1,7 +1,7 @@
 import { JSDOM } from 'jsdom';
 import formatName from './nameFormatter.js';
 import convertToUtc from './utcConverter.js';
-import { codData as data } from './matchData.js'; 
+// import { codData as data } from './matchData.js'; 
 import { calcExpiration } from './calcExpiration.js';
 
 const getCodMatches = async () => {
@@ -10,8 +10,8 @@ const getCodMatches = async () => {
   // https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=WAP%20Esports&prop=text
   // 100t endpoint
   // https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=100%20Thieves&prop=text
-  /*
-  const endpoint = 'https://liquipedia.net/leagueoflegends/api.php?action=parse&format=json&page=WAP%20Esports&prop=text';
+
+  const endpoint = 'https://liquipedia.net/callofduty/api.php?action=parse&format=json&page=100%20Thieves&prop=text';
   const response = await fetch(endpoint, {
     method: 'GET',
     headers: {
@@ -20,7 +20,6 @@ const getCodMatches = async () => {
     }
   });
   const data = await response.json();
-  */
 
   // create a virtual DOM environment
   const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
