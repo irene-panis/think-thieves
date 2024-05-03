@@ -22,11 +22,11 @@ export const WhosLive = ( props ) => {
   }, [props.team]);
 
   return (
-    <div className="flex flex-col grow">
-      <Subheader content="Who's Live" />
+    <div className="flex flex-col grow my-4">
+      <Subheader content="WHO'S LIVE" />
       <div className="flex flex-col gap-2">
         {streamers.length === 0 ? (
-          <div>No one is currently live</div>
+          <div className="italic">No one is currently live</div>
         ): (
         streamers.map((stream, index) => (
           <div

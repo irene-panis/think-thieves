@@ -37,13 +37,13 @@ export const UpcomingMatches = ( props ) => {
   }, [props.team]);
 
   return (
-    <div className="flex flex-col grow">
+    <div className="flex flex-col grow my-4">
       <Subheader
-        content="Upcoming Matches"
+        content="UPCOMING MATCHES"
       />
       <div className="team-list flex flex-col gap-2">
         {upcoming.length === 0 ? (
-          <div>No upcoming matches</div>
+          <div className="italic">No upcoming matches</div>
         ) : (
           upcoming.map((team, index) => (
             <div className="team flex flex-col border border-black shadow-md p-2" key={index}>
