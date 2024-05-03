@@ -22,7 +22,7 @@ export const WhosLive = ( props ) => {
   }, [props.team]);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col grow">
       <Subheader content="Who's Live" />
       <div className="flex flex-col gap-2">
         {streamers.length === 0 ? (

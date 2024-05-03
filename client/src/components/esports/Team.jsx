@@ -147,7 +147,7 @@ export const Team = ( props ) => {
       <Header
         header={props.name}
       />
-      <div className="social-info flex justify-evenly">
+      <div className="social-info flex flex-wrap justify-evenly gap-[5%] px-2">
         <UpcomingMatches
           team={props.name}
         />

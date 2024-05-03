@@ -37,7 +37,7 @@ export const UpcomingMatches = ( props ) => {
   }, [props.team]);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col grow">
       <Subheader
         content="Upcoming Matches"
       />
