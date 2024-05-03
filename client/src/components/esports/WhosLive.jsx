@@ -7,7 +7,7 @@ export const WhosLive = ( props ) => {
 
   useEffect(() => {
     const grabData = async () => {
-      const getURL = `http://localhost:3001/api/get-streams/${props.name}`;
+      const getURL = `http://localhost:3001/api/get-streams/${props.team}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
@@ -19,13 +19,16 @@ export const WhosLive = ( props ) => {
       setStreamers(streamArray.data);
     };
     grabData();
-  }, [props.name]);
+  }, [props.team]);
 
   return (
     <div className="flex flex-col">
       <Subheader content="Who's Live" />
       <div className="flex flex-col gap-2">
-        {streamers.map((stream, index) => (
+        {streamers.length === 0 ? (
+          <div>No one is currently live</div>
+        ): (
+        streamers.map((stream, index) => (
           <div
             key={index}
             className="border border-black py-1 px-2 flex flex-col"
@@ -34,7 +37,8 @@ export const WhosLive = ( props ) => {
             <span>{stream.game_name}</span>
             <span>{stream.title}</span>
           </div>
-        ))}
+        ))
+      )}
       </div>
     </div>
   );
