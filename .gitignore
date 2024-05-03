@@ -25,3 +25,6 @@ dist-ssr
 
 # Redis dump file
 dump.rdb
+
+# super secret environment variables
+.env
