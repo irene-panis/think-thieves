@@ -1,6 +1,3 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 export const getTwitchToken = async () => {
   const url = "https://id.twitch.tv/oauth2/token";
   const CLIENT_ID = process.env.TWITCH_CLIENT_ID;
