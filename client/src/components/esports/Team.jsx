@@ -151,7 +151,9 @@ export const Team = ( props ) => {
         <UpcomingMatches
           team={props.name}
         />
-        <WhosLive/>
+        <WhosLive
+          team={props.name}
+        />
       </div>
       <PlayerProfile
         roster={roster}

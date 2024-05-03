@@ -7,7 +7,7 @@ export const WhosLive = ( props ) => {
 
   useEffect(() => {
     const grabData = async () => {
-      const getURL = `http://localhost:3001/api/get-streams`;
+      const getURL = `http://localhost:3001/api/get-streams/${props.name}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
@@ -19,7 +19,7 @@ export const WhosLive = ( props ) => {
       setStreamers(streamArray.data);
     };
     grabData();
-  }, [props.roster]);
+  }, [props.name]);
 
   return (
     <div className="flex flex-col">

@@ -128,7 +128,7 @@ app.get('/api/get-cod', async (req, res) => {
   }
 });
 
-app.get('/api/get-streams', async (req, res) => {
+app.get('/api/get-streams/:roster', async (req, res) => {
   let token = await client.get('TWITCH_TOKEN');
   if (!token) {
     const newToken = await getTwitchToken();
@@ -137,7 +137,7 @@ app.get('/api/get-streams', async (req, res) => {
     token = newToken.access_token;
     console.log("New Token Generated");
   }
-  const data = await getStreams(token);
+  const data = await getStreams(token, req.params.roster);
   return res.json(data);
 });
 
