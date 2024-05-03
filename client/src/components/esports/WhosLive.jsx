@@ -31,7 +31,7 @@ export const WhosLive = ( props ) => {
         streamers.map((stream, index) => (
           <div
             key={index}
-            className="border border-black py-1 px-2 flex flex-col"
+            className="border border-black p-2 flex flex-col"
           >
             <span>{stream.user_name}</span>
             <span>{stream.game_name}</span>
