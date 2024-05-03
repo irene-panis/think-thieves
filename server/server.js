@@ -1,11 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
-import getValMatches from './utils/valscraper.js';
-dotenv.config();
+import path from "path";
+const __dirname = import.meta.dirname;
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 import cors from "cors";
 import { createClient } from 'redis';
+
+import getValMatches from './utils/valscraper.js';
 import getLeagueMatches from "./utils/leaguescraper.js";
 import getCodMatches from "./utils/codscraper.js";
+import { getStreams } from "./utils/getStreams.js";
+import { getTwitchToken } from "./utils/getTwitchToken.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -121,6 +126,19 @@ app.get('/api/get-cod', async (req, res) => {
     console.log("Cache Miss - COD");
     return res.json(data);
   }
+});
+
+app.get('/api/get-streams', async (req, res) => {
+  let token = await client.get('TWITCH_TOKEN');
+  if (!token) {
+    const newToken = await getTwitchToken();
+    client.set('TWITCH_TOKEN', newToken.access_token);
+    client.expire('TWITCH_TOKEN', newToken.expires_in);
+    token = newToken.access_token;
+    console.log("New Token Generated");
+  }
+  const data = await getStreams(token);
+  return res.json(data);
 });
 
 app.listen(PORT, () => {
