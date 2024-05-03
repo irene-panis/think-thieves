@@ -17,9 +17,9 @@ export const PlayerProfile = ( props ) => {
   const playerSocials = player.socials;
 
   return (
-    <>
+    <div>
       <Subheader
-        content="Player Profiles"
+        content="PLAYER PROFILES"
       />
       <div className="players flex gap-2">
         {
@@ -28,7 +28,7 @@ export const PlayerProfile = ( props ) => {
               type="button"
               onClick={() => handlePlayerChange(player)} 
               key={index}
-              className="bg-white py-1 px-2 rounded-md border border-black"
+              className="bg-white py-1 px-2 border border-black uppercase hover:bg-black hover:text-white ease-in-out duration-200"
             >
               {player.ign}
             </button>
@@ -48,6 +48,6 @@ export const PlayerProfile = ( props ) => {
           src={player.img}
         />
       </div>
-    </>
+    </div>
   )
 }
