@@ -143,11 +143,11 @@ export const Team = ( props ) => {
   }, [props.name]);
 
   return (
-    <>
+    <div className="m-2 flex flex-col gap-4">
       <Header
         header={props.name}
       />
-      <div className="social-info flex flex-wrap justify-evenly gap-8 px-2">
+      <div className="social-info flex flex-wrap justify-evenly gap-4">
         <UpcomingMatches
           team={props.name}
         />
@@ -158,6 +158,6 @@ export const Team = ( props ) => {
       <PlayerProfile
         roster={roster}
       />
-    </>
+    </div>
   )
 }
