@@ -37,9 +37,9 @@ export const UpcomingMatches = ( props ) => {
   }, [props.team]);
 
   return (
-    <>
+    <div className="flex flex-col">
       <Subheader
-          content="Upcoming Matches"
+        content="Upcoming Matches"
       />
       <div className="team-list flex flex-col gap-2">
         {upcoming.length === 0 ? (
@@ -55,6 +55,6 @@ export const UpcomingMatches = ( props ) => {
           ))
         )}
       </div>
-    </>
+    </div>
   )
 }
