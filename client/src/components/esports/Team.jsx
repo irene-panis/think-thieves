@@ -3,6 +3,7 @@ import { Header } from "../Header"
 import { useState, useEffect } from "react"
 import { PlayerProfile } from "./PlayerProfile"
 import { UpcomingMatches } from "./UpcomingMatches"
+import { WhosLive } from "./WhosLive"
 
 export const Team = ( props ) => {
 
@@ -146,9 +147,12 @@ export const Team = ( props ) => {
       <Header
         header={props.name}
       />
-      <UpcomingMatches
-        team={props.name}
-      />
+      <div className="social-info flex">
+        <UpcomingMatches
+          team={props.name}
+        />
+        <WhosLive/>
+      </div>
       <PlayerProfile
         roster={roster}
       />
