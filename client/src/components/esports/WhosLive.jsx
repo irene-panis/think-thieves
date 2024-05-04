@@ -33,9 +33,9 @@ export const WhosLive = ( props ) => {
             key={index}
             className="border border-black p-2 flex flex-col"
           >
-            <span>{stream.user_name}</span>
+            <span className="font-bold">{stream.user_name}</span>
             <span>{stream.game_name}</span>
-            <span>{stream.title}</span>
+            <span className="italic">{stream.title}</span>
           </div>
         ))
       )}
