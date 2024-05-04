@@ -1,6 +1,6 @@
-export const SocialIcon = ( platform ) => {
+export const SocialIcon = ( props ) => {
   let icon;
-  switch (platform) {
+  switch (props.platform) {
     case 'twitter':
       icon = "lab la-twitter";
       break;

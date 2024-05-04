@@ -1,6 +1,7 @@
 import { Subheader } from "../Subheader"
 import { useState, useEffect } from "react"
 import { Image } from "../Image";
+import { SocialIcon } from "../SocialIcon";
 
 export const PlayerProfile = ( props ) => {
 
@@ -40,7 +41,7 @@ export const PlayerProfile = ( props ) => {
         {
           playerSocials.map((social, index) => (
             <span key={index}>
-              {social.platform}: {social.link}
+              <SocialIcon platform={social.platform}/>: {social.link}
             </span>
           ))
           }
