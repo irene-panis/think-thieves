@@ -4,14 +4,15 @@ Think Thieves is a re-imagining of the 100 Thieves website, designed to place a 
 
 While the original 100 Thieves website is beautiful as it is, I felt that there was not enough information being showcased regarding the organization's esports teams and content creators. Thus, Think Thieves is meant to exacerbate this by placing esports and content at the forefront of the site's design. Web scrapers and APIs are used in tandem to grab the latest data about who's currently live and when 100 Thieves' esports teams are playing next. Ultimately, though, I really wanted a place to give 100T VAL, 100T LoL, and LA Thieves their own spotlights.
 
-Think Thieves is being built using React, with Express to assist in running the Puppeteer web scraper.
+Think Thieves is being built using React, with Express to assist in running the Puppeteer web scraper. Match data is cached using Redis.
 
 ## Preview 
 No deployed site yet but here are a few previews of the site on mobile! <br>
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="200" height="auto">
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/4b6f3e51-9813-475a-9d61-89ff9e84686d" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/f8512278-47d0-42f4-8f7b-5c39faeeab4c" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/b8e35f87-0edb-445a-88b4-7dcd6ec3c92c" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/7170699b-9f7a-45ef-ac83-5f094d6e8bad" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/431bfa6e-d7d6-4476-8fc5-88e0eaa91be8" width="200" height="auto">
+
 
 
 
