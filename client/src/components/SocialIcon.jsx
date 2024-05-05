@@ -4,8 +4,14 @@ export const SocialIcon = ( props ) => {
     case 'twitter':
       icon = "lab la-twitter";
       break;
-    case 'stream':
+    case 'twitch':
       icon = "lab la-twitch";
+      break;
+    case 'instagram':
+      icon = "lab la-instagram";
+      break;
+    case 'youtube':
+      icon = "lab la-youtube";
       break;
   }
 
