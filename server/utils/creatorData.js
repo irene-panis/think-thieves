@@ -15,8 +15,7 @@ export const creators = [
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/Valkyrae' },
       { platform: 'instagram', link: 'https://www.instagram.com/valkyrae' },
-      { platform: 'youtube', link: 'https://www.youtube.com/@Valkyrae' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@valkyrae' }
+      { platform: 'youtube', link: 'https://www.youtube.com/@Valkyrae' }
     ]
   },
   {
@@ -35,8 +34,7 @@ export const creators = [
       { platform: 'twitter', link: 'https://twitter.com/brookeab' },
       { platform: 'twitch', link: 'https://www.twitch.tv/brookeab' },
       { platform: 'instagram', link: 'https://www.instagram.com/brookeabb' },
-      { platform: 'youtube', link: 'https://www.youtube.com/@BrookeAB' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@brookeab' },
+      { platform: 'youtube', link: 'https://www.youtube.com/@BrookeAB' }
     ]
   },
   {
@@ -44,8 +42,7 @@ export const creators = [
     img: '/content/d4vd.jpeg',
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/d4vddd' },
-      { platform: 'instagram', link: 'https://www.instagram.com/d4vddd/' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@d4vdd' }
+      { platform: 'instagram', link: 'https://www.instagram.com/d4vddd/' }
     ]
   },
   {
@@ -61,8 +58,7 @@ export const creators = [
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/fuslie' },
       { platform: 'instagram', link: 'https://www.instagram.com/fuslie/' },
-      { platform: 'youtube', link: 'https://www.youtube.com/fuslie' },
-      { platform: 'tiktok', link: 'https://www.instagram.com/fuslie/' }
+      { platform: 'youtube', link: 'https://www.youtube.com/fuslie' }
     ]
   },
   {
@@ -115,8 +111,7 @@ export const creators = [
     name: 'JoshChx',
     img: '/content/joshchx.jpeg',
     socials: [
-      { platform: 'twitter', link: 'https://twitter.com/joshchx' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@joshchx' },
+      { platform: 'twitter', link: 'https://twitter.com/joshchx' }
     ]
   },
   {
@@ -144,8 +139,7 @@ export const creators = [
       { platform: 'twitter', link: 'https://twitter.com/loughtv' },
       { platform: 'twitch', link: 'https://www.twitch.tv/loughh' },
       { platform: 'instagram', link: 'https://www.instagram.com/loganlrobles' },
-      { platform: 'youtube', link: 'https://www.youtube.com/@loughh' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@loughh' },
+      { platform: 'youtube', link: 'https://www.youtube.com/@loughh' }
     ]
   },
   {
@@ -198,8 +192,7 @@ export const creators = [
       { platform: 'twitter', link: 'https://twitter.com/vinniehacker' },
       { platform: 'twitch', link: 'https://www.twitch.tv/vinnie' },
       { platform: 'instagram', link: 'https://www.instagram.com/vinniehacker/' },
-      { platform: 'youtube', link: 'https://www.youtube.com/@vinniehacker1702' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@vhackerr' },
+      { platform: 'youtube', link: 'https://www.youtube.com/@vinniehacker1702' }
     ]
   },
   {
@@ -208,8 +201,7 @@ export const creators = [
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/kingwoolz' },
       { platform: 'instagram', link: 'https://www.instagram.com/kingwoolz/' },
-      { platform: 'youtube', link: 'https://www.youtube.com/@KingWoolz' },
-      { platform: 'tiktok', link: 'https://www.tiktok.com/@kingwoolz' }
+      { platform: 'youtube', link: 'https://www.youtube.com/@KingWoolz' }
     ]
   },
   {
