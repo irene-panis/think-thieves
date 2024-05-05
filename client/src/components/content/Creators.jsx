@@ -1,6 +1,6 @@
 import { creators } from "../../../../server/utils/creatorData";
 
-export const Creators = ( onCreatorChange ) => {
+export const Creators = ( {onCreatorChange} ) => {
 
   return (
     <div>
