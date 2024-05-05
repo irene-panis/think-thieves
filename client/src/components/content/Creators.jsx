@@ -1,6 +1,6 @@
 import { creators } from "../../../../server/utils/creatorData";
 
-export const Creators = ( {onCreatorChange} ) => {
+export const Creators = ( {onCreatorChange, currentCreator} ) => {
 
   return (
     <div className="flex items-center justify-center py-10">
@@ -9,7 +9,7 @@ export const Creators = ( {onCreatorChange} ) => {
           <li 
             key={index} 
             onClick={() => onCreatorChange(creator)}
-            className="font-oswald text-5xl hover:text-zinc-500 duration-200 ease-in-out hover:translate-y-2 p-2"
+            className={`font-oswald text-5xl hover:text-zinc-500 duration-200 ease-in-out p-2 ${currentCreator === creator ? 'text-zinc-500 translate-y-2' : ''}`}
           >
             {creator.name}
           </li>
