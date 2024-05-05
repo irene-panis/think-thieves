@@ -17,7 +17,7 @@ const getValMatches = async () => {
   const matches = await page.evaluate(() => {
     const matchList = Array.from(document.querySelectorAll("a.wf-card.m-item")).slice(0, 10);
 
-    if (matchList.length === 0) { return 'No matches found'; }
+    if (matchList.length === 0) { return []; }
 
     const matchData = [];
 
