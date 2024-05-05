@@ -14,9 +14,11 @@ export const Content = () => {
 
 
   return (
-    <div className="content-wrapper w-full h-full" style={{ height: containerHeight }}>
-      <Creators onCreatorChange={handleCreatorChange}/>
-      <CreatorSpotlight creator={creator}/>
+    <div className="content-wrapper w-full" style={{ height: containerHeight }}>
+      <div className="creator-container flex h-full flex-col justify-evenly">
+        <Creators onCreatorChange={handleCreatorChange}/>
+        <CreatorSpotlight creator={creator}/>
+      </div>
     </div>
   )
 }
