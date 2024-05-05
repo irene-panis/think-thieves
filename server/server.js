@@ -39,6 +39,13 @@ app.get('/api/get-val', async (req, res) => {
     return res.json(matchesArray);
   } else {
     const data = await getValMatches();
+    console.log(data);
+    if (data.length === 0) {
+      client.hSet("VALORANT", "matches", "[]");
+      client.expire("VALORANT", 60);
+      console.log("Cache Miss - VALORANT");
+      return res.json(data);
+    }
     const matches = [];
     data.forEach((match) => {
       const matchId = match.name + " " + matchNumber;
