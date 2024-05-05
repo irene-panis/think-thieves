@@ -13,7 +13,7 @@ export const Team = ( props ) => {
       img: '/esports/asuna.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/Asunaa' },
-        { platform: 'stream', link: 'https://twitch.tv/AsunaWEEB' }
+        { platform: 'twitch', link: 'https://twitch.tv/AsunaWEEB' }
       ]
     },
     {
@@ -21,7 +21,7 @@ export const Team = ( props ) => {
       img: '/esports/bang.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/bangzerra' },
-        { platform: 'stream', link: 'https://twitch.tv/bangzerra' }
+        { platform: 'twitch', link: 'https://twitch.tv/bangzerra' }
       ]
     },
     {
@@ -29,7 +29,7 @@ export const Team = ( props ) => {
       img: '/esports/boostio.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/Boostio' },
-        { platform: 'stream', link: 'https://twitch.tv/boostio' }
+        { platform: 'twitch', link: 'https://twitch.tv/boostio' }
       ]
     },
     {
@@ -37,7 +37,7 @@ export const Team = ( props ) => {
       img: '/esports/cryo.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/Cryocells_' },
-        { platform: 'stream', link: 'https://twitch.tv/Cryocells' }
+        { platform: 'twitch', link: 'https://twitch.tv/Cryocells' }
       ]
     },
     {
@@ -45,7 +45,7 @@ export const Team = ( props ) => {
       img: '/esports/eeiu.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/777eeiu' },
-        { platform: 'stream', link: 'https://twitch.tv/777eeiu' }
+        { platform: 'twitch', link: 'https://twitch.tv/777eeiu' }
       ]
     }
   ];
@@ -55,7 +55,7 @@ export const Team = ( props ) => {
       img: '/esports/eyla.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/SupportEyla' },
-        { platform: 'stream', link: 'https://twitch.tv/eylaa' }
+        { platform: 'twitch', link: 'https://twitch.tv/eylaa' }
       ]
     },
     {
@@ -63,7 +63,7 @@ export const Team = ( props ) => {
       img: '/esports/meech.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/Meechlol1' },
-        { platform: 'stream', link: 'https://twitch.tv/meech_lol' }
+        { platform: 'twitch', link: 'https://twitch.tv/meech_lol' }
       ]
     },
     {
@@ -71,7 +71,7 @@ export const Team = ( props ) => {
       img: '/esports/quid.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/quidlolkr' },
-        { platform: 'stream', link: 'https://twitch.tv/quidlolkr' }
+        { platform: 'twitch', link: 'https://twitch.tv/quidlolkr' }
       ]
     },
     {
@@ -79,7 +79,7 @@ export const Team = ( props ) => {
       img: '/esports/river.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/lolRiver' },
-        { platform: 'stream', link: 'https://twitch.tv/city072331' }
+        { platform: 'twitch', link: 'https://twitch.tv/city072331' }
       ]
     },
     {
@@ -87,7 +87,7 @@ export const Team = ( props ) => {
       img: '/esports/sniper.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/GeneralSniper' },
-        { platform: 'stream', link: 'https://twitch.tv/generalsniper' }
+        { platform: 'twitch', link: 'https://twitch.tv/generalsniper' }
       ]
     }
   ];
@@ -97,7 +97,7 @@ export const Team = ( props ) => {
       img: '/esports/ghosty.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/oDanGhosty' },
-        { platform: 'stream', link: 'https://twitch.tv/odanghosty' }
+        { platform: 'twitch', link: 'https://twitch.tv/odanghosty' }
       ]
     },
     {
@@ -105,7 +105,7 @@ export const Team = ( props ) => {
       img: '/esports/joedeceives.jpeg',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/JoeDeceives' },
-        { platform: 'stream', link: 'https://twitch.tv/joedeceivess' }
+        { platform: 'twitch', link: 'https://twitch.tv/joedeceivess' }
       ]
     },
     {
@@ -113,7 +113,7 @@ export const Team = ( props ) => {
       img: '/esports/kremp.png',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/KrempV' },
-        { platform: 'stream', link: 'https://twitch.tv/krempw' }
+        { platform: 'twitch', link: 'https://twitch.tv/krempw' }
       ]
     },
     {
@@ -121,7 +121,7 @@ export const Team = ( props ) => {
       img: '/esports/nastie.png',
       socials: [
         { platform: 'twitter', link: 'https://twitter.com/Nastiee_' },
-        { platform: 'stream', link: 'https://twitch.tv/nastie_' }
+        { platform: 'twitch', link: 'https://twitch.tv/nastie_' }
       ]
     }
   ];
