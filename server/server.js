@@ -162,7 +162,8 @@ app.get('/api/get-streams/:roster', async (req, res) => {
     return res.json(streamsArray);
   } else {
     const streamData = await getStreams(token, req.params.roster);
-    if (streamData.length === 0) {
+    console.log(req.params.roster, streamData);
+    if (streamData.data.length === 0) {
       client.hSet(req.params.roster + " STREAMS", "streams", "[]");
       client.expire(req.params.roster + " STREAMS", 300);
       console.log("Cache Miss - " + req.params.roster + " STREAMS");
@@ -176,6 +177,7 @@ app.get('/api/get-streams/:roster', async (req, res) => {
       });
     });
     client.hSet(req.params.roster + " STREAMS", "streams", JSON.stringify(streams));
+    client.expire(req.params.roster + " STREAMS", 300);
     console.log("Cache Miss - " + req.params.roster + " STREAMS");
     return res.json(streamData.data);
   }
