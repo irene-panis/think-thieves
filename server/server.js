@@ -162,7 +162,7 @@ app.get('/api/get-streams/:roster', async (req, res) => {
     return res.json(streamsArray);
   } else {
     const streamData = await getStreams(token, req.params.roster);
-    if (streamData.data.length === 0) {
+    if (streamData.length === 0) {
       client.hSet(req.params.roster + " STREAMS", "streams", "[]");
       client.expire(req.params.roster + " STREAMS", 300);
       console.log("Cache Miss - " + req.params.roster + " STREAMS");

@@ -16,7 +16,6 @@ export const WhosLive = ( props ) => {
         }
       });
       const streamArray = await response.json();
-      console.log(streamArray);
       setStreamers(streamArray);
     };
     grabData();

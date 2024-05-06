@@ -1,5 +1,9 @@
+import { WhosLive } from "../esports/WhosLive"
+
 export const CreatorFeed = () => {
   return (
-    <><span>yes!</span></>
+    <>
+      <WhosLive team="CONTENT"/>
+    </>
   )
 }
