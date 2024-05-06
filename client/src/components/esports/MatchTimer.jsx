@@ -37,12 +37,17 @@ export const MatchTimer = ({ targetDate }) => {
   });
 
   return (
-    <div>
-      {timeLeft.days}:
-      {('0' + timeLeft.hours).slice(-2)}:
-      {('0' + timeLeft.minutes).slice(-2)}:
-      {('0' + timeLeft.seconds).slice(-2)}
-    </div>
+    <>
+      {Object.keys(timeLeft).length === 0 ? ( // if timeLeft returns empty object then match is currently live
+        <span>Live now!</span>
+      ) : (
+        <div>
+          {timeLeft.days}:{("0" + timeLeft.hours).slice(-2)}:
+          {("0" + timeLeft.minutes).slice(-2)}:
+          {("0" + timeLeft.seconds).slice(-2)}
+        </div>
+      )}
+    </>
   );
 }
 
