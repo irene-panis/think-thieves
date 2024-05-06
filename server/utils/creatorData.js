@@ -246,6 +246,7 @@ export const creators = [
     img: '/content/woolz.jpeg',
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/kingwoolz' },
+      { platform: 'twitch', link: 'https://twitch.tv/kingwoolz' },
       { platform: 'instagram', link: 'https://www.instagram.com/kingwoolz/' },
       { platform: 'youtube', link: 'https://www.youtube.com/@KingWoolz' }
     ]
