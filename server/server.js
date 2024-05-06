@@ -151,8 +151,34 @@ app.get('/api/get-streams/:roster', async (req, res) => {
     token = newToken.access_token;
     console.log("New Token Generated");
   }
-  const data = await getStreams(token, req.params.roster);
-  return res.json(data);
+  const cache = await client.hGetAll(req.params.roster + " STREAMS");
+  if (Object.keys(cache).length !== 0) { // cache contains data, grab from redis
+    const streamsArray = [];
+    const streamsField = JSON.parse(cache.streams);
+    streamsField.forEach((stream) => {
+      streamsArray.push(stream.streamData);
+    });
+    console.log("Cache Hit - " + req.params.roster + " STREAMS");
+    return res.json(streamsArray);
+  } else {
+    const streamData = await getStreams(token, req.params.roster);
+    if (streamData.data.length === 0) {
+      client.hSet(req.params.roster + " STREAMS", "streams", "[]");
+      client.expire(req.params.roster + " STREAMS", 300);
+      console.log("Cache Miss - " + req.params.roster + " STREAMS");
+      return res.json(streamData.data);
+    }
+    const streams = [];
+    streamData.data.forEach((stream) => {
+      streams.push({
+        streamName: stream.user_name,
+        streamData: stream
+      });
+    });
+    client.hSet(req.params.roster + " STREAMS", "streams", JSON.stringify(streams));
+    console.log("Cache Miss - " + req.params.roster + " STREAMS");
+    return res.json(streamData.data);
+  }
 });
 
 app.listen(PORT, () => {
