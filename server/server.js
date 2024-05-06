@@ -39,7 +39,6 @@ app.get('/api/get-val', async (req, res) => {
     return res.json(matchesArray);
   } else {
     const data = await getValMatches();
-    console.log(data);
     if (data.length === 0) {
       client.hSet("VALORANT", "matches", "[]");
       client.expire("VALORANT", 60);
