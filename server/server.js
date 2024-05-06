@@ -92,8 +92,12 @@ app.get('/api/get-lol', async (req, res) => {
       });
     });
     client.hSet("LoL", "matches", JSON.stringify(matches));
-    client.expire("LoL", Math.floor(matches[0].matchData.exp)); // set expiration to nearest match time
-    // cache expires after nearest match arrives
+    if (matches[0].matchData.exp < 0) { // account for currently live matches
+      client.expire("LoL", 86400); // set expiration to 1 day
+    } else {
+      client.expire("LoL", Math.floor(matches[0].matchData.exp)); // set expiration to nearest match time
+      // cache expires after nearest match arrives
+    }
     console.log("Cache Miss - LoL");
     return res.json(data);
   }
@@ -128,7 +132,11 @@ app.get('/api/get-cod', async (req, res) => {
       });
     });
     client.hSet("COD", "matches", JSON.stringify(matches));
-    client.expire("COD", Math.floor(matches[0].matchData.exp));
+    if (matches[0].matchData.exp < 0) { // account for currently live matches
+      client.expire("COD", 86400); // set expiration to 1 day
+    } else {
+      client.expire("COD", Math.floor(matches[0].matchData.exp));
+    }
     console.log("Cache Miss - COD");
     return res.json(data);
   }
