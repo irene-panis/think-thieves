@@ -7,26 +7,22 @@ export const CreatorCollapse = ( { bio } ) => {
   const handleClick = (e) => {
     const coll = e.target;
     var content = coll.nextElementSibling;
-    if (content.style.maxHeight) {
-      setShowBio(false);
-      content.style.maxHeight = null;
-    } else {
-      setShowBio(true);
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    const newMaxHeight = showBio ? null : content.scrollHeight + "px";
+    setShowBio(!showBio);
+    content.style.maxHeight = newMaxHeight;
   }
 
   return (
     <div className="w-full">
       <button 
-        className="collapsible lowercase text-black duration-200 ease-in-out"
+        className="lowercase text-black duration-200 ease-in-out"
         onClick={handleClick}
       >
         {
           showBio ? (
-            <span>show bio</span>
+            "hide bio"
           ) : (
-            <span>hide bio</span>
+            "show bio"
           )
         }
       </button>
