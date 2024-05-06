@@ -134,7 +134,7 @@ export const creators = [
   },
   {
     name: 'Lough',
-    img: '/content/brookeab.jpeg',
+    img: '/content/lough.jpeg',
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/loughtv' },
       { platform: 'twitch', link: 'https://www.twitch.tv/loughh' },
