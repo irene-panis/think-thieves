@@ -6,7 +6,7 @@ export const CreatorSpotlight = ( { creator } ) => {
     <div className="creator-spotlight mx-4 flex-grow flex flex-col gap-2">
       <Image src={creator.img}/>
       <div className="creator-info flex justify-between">
-        <span className="uppercase">{creator.name}</span>
+        <span className="uppercase"><b>{creator.name}</b>, {creator.title}</span>
         <div className="creator-socials flex gap-2">
           {creator.socials.map((social, index) => {
             return (
