@@ -1,10 +1,10 @@
 # Think Thieves (100 Thieves Fansite)
 
-Think Thieves is a re-imagining of the 100 Thieves website, designed to place a larger emphasis on the team's esports sector.
+Think Thieves is a re-imagining of the 100 Thieves website, designed to place a larger emphasis on the team's esports sector. While the original 100 Thieves website is beautiful as it is, I felt that there was not enough information being showcased regarding the organization's esports teams and content creators. Thus, Think Thieves is meant to exacerbate this by placing esports and content at the forefront of the site's design. 
 
-While the original 100 Thieves website is beautiful as it is, I felt that there was not enough information being showcased regarding the organization's esports teams and content creators. Thus, Think Thieves is meant to exacerbate this by placing esports and content at the forefront of the site's design. Web scrapers and APIs are used in tandem to grab the latest data about who's currently live and when 100 Thieves' esports teams are playing next. Ultimately, though, I really wanted a place to give 100T VAL, 100T LoL, and LA Thieves their own spotlights.
+Web scrapers and APIs are used in tandem to grab the latest data about who's currently live and when 100 Thieves' esports teams are playing next. Match and stream data are cached to prevent overly-repeated API calls and scrapes. Match data is retrieved by web scraping vlr.gg for 100T VAL matches and using the Liquipedia API to parse for 100T LoL's and LA Thieves' matches. Current Twitch streams are retrieved using the Twitch API while current YouTube streams are retrieved by scraping the channels of those that stream on YouTube (which is only a tiny handful).
 
-Think Thieves is being built using React, with Express to assist in running the Puppeteer web scraper. Match data is cached using Redis.
+Think Thieves is being built using React, with Express to assist in running the Puppeteer web scraper. Match and stream data are cached using Redis.
 
 ## Preview 
 No deployed site yet but here are a few previews of the site on mobile! <br>
