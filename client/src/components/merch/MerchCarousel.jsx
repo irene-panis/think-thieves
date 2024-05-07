@@ -3,7 +3,7 @@ import { register } from 'swiper/element/bundle';
 
 register();
 
-export const MerchCarousel = ({ images }) => {
+export const MerchCarousel = ({ images, onApparelChange }) => {
   const swiperElRef = useRef(null);
 
   return (
@@ -21,7 +21,7 @@ export const MerchCarousel = ({ images }) => {
           <swiper-slide key={index}>
             <div className="slide-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center drop-shadow-md text-white">
               <h2 className="font-bold font-dmmono text-3xl">{img.text}</h2>
-              <span className="underline hover:bg-black hover:text-white duration-200 ease-in-out">LEARN MORE</span>
+              <span className="underline hover:bg-black hover:text-white duration-200 ease-in-out" onClick={() => onApparelChange(img.text)}>LEARN MORE</span>
             </div>
             <img className="w-full h-full object-cover" src={img.img}/>
           </swiper-slide>

@@ -1,4 +1,5 @@
 import { MerchCarousel } from "../components/merch/MerchCarousel"
+import { useState } from "react";
 
 export const Apparel = () => {
   const carouselImgs = [
@@ -19,10 +20,17 @@ export const Apparel = () => {
       text: `LA THIEVES`
     },
   ];
-  const containerHeight = `calc(100vh - 4rem)`;
+
+  const [apparel, setApparel] = useState(`FOUNDATIONS SS'24`);
+
+  const handleApparelChange = (newApparel) => {
+    setApparel(newApparel);
+  }
+
   return (
-    <div className="apparel-wrapper w-full" style={{ height: containerHeight }}>
-      <MerchCarousel images={carouselImgs}/>
+    <div className="apparel-wrapper w-full">
+      <MerchCarousel images={carouselImgs} onApparelChange={handleApparelChange}/>
+      <span>{apparel}</span>
     </div>
   )
 }
