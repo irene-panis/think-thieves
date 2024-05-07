@@ -21,7 +21,7 @@ export const MerchCarousel = ({ images }) => {
       {
         images.map((img, index) => (
           <swiper-slide key={index}>
-            <img className="w-full h-full object-cover" src={img}/>
+            <img className="w-full h-full object-cover" src={img.img}/>
           </swiper-slide>
         ))
       }
