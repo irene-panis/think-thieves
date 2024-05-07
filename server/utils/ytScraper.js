@@ -4,7 +4,7 @@ const getYoutubeStreams = async () => {
 
   const browser = await puppeteer.launch();
 
-  const creators = ['Vogue', 'Vogue'];
+  const creators = ['Valkyrae', 'Fuslie', 'CouRageJD', 'NoahJ456'];
 
   const streams = [];
 
@@ -19,7 +19,7 @@ const getYoutubeStreams = async () => {
   
     // Wait for the specific element to appear on the page
     try {
-      await page.waitForSelector("div.yt-spec-avatar-shape--live-ring", { timeout: 1000 });
+      await page.waitForSelector("div.yt-spec-avatar-shape--live-ring", { timeout: 500 });
       const stream = await page.evaluate(() => {
         const streamTitle = document.querySelector("#title-wrapper span").innerText;
         return streamTitle;
