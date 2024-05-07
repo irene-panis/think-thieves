@@ -4,7 +4,7 @@ const getYoutubeStreams = async () => {
 
   const browser = await puppeteer.launch();
 
-  const creators = ['Vogue', 'Vogue', 'Vogue', 'Vogue'];
+  const creators = ['Vogue', 'Vogue'];
 
   const streams = [];
 
@@ -25,7 +25,7 @@ const getYoutubeStreams = async () => {
         return streamTitle;
       });
       const streamObj = {
-        name: creator,
+        user_name: creator,
         title: stream
       }
       streams.push(streamObj);
@@ -35,7 +35,6 @@ const getYoutubeStreams = async () => {
   }
 
   await browser.close();
-  console.log(streams);
   return streams;
 };
 

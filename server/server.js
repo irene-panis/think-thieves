@@ -11,6 +11,7 @@ import getLeagueMatches from "./utils/leaguescraper.js";
 import getCodMatches from "./utils/codscraper.js";
 import { getStreams } from "./utils/getStreams.js";
 import { getTwitchToken } from "./utils/getTwitchToken.js";
+import getYoutubeStreams from "./utils/ytScraper.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -156,30 +157,52 @@ app.get('/api/get-streams/:roster', async (req, res) => {
     const streamsArray = [];
     const streamsField = JSON.parse(cache.streams);
     streamsField.forEach((stream) => {
-      streamsArray.push(stream.streamData);
+      streamsArray.push(stream);
     });
     console.log("Cache Hit - " + req.params.roster + " STREAMS");
     return res.json(streamsArray);
   } else {
-    const streamData = await getStreams(token, req.params.roster);
-    if (streamData.data.length === 0) {
+    const twitchData = await getStreams(token, req.params.roster);
+    let youtubeData;
+    if (req.params.roster === "CONTENT") {
+      youtubeData = await getYoutubeStreams();
+    } else {
+      youtubeData = [];
+    }
+    if (twitchData.data.length === 0 && youtubeData.length === 0) {
       client.hSet(req.params.roster + " STREAMS", "streams", "[]");
       client.expire(req.params.roster + " STREAMS", 300);
       console.log("Cache Miss - " + req.params.roster + " STREAMS");
-      return res.json(streamData.data);
+      return res.json([]);
     }
     const streams = [];
-    streamData.data.forEach((stream) => {
-      streams.push({
-        streamName: stream.user_name,
-        streamData: stream
+    if (twitchData.data.length !== 0) {
+      twitchData.data.forEach((stream) => {
+        streams.push({
+          streamName: stream.user_name,
+          streamData: stream
+        });
       });
-    });
+    }
+    if (youtubeData.length !== 0) {
+      youtubeData.forEach((stream) => {
+        streams.push({
+          streamName: stream.user_name,
+          streamData: stream
+        });
+      });
+    }
     client.hSet(req.params.roster + " STREAMS", "streams", JSON.stringify(streams));
     client.expire(req.params.roster + " STREAMS", 300);
     console.log("Cache Miss - " + req.params.roster + " STREAMS");
-    return res.json(streamData.data);
+    return res.json(streams);
   }
+});
+
+app.get('/api/youtube', async (req, res) => {
+  console.log("api call");
+  const response = await getYoutubeStreams();
+  return res.json(response);
 });
 
 app.listen(PORT, () => {
