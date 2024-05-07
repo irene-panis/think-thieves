@@ -9,9 +9,11 @@ Think Thieves is being built using React, with Express to assist in running the 
 ## Preview 
 No deployed site yet but here are a few previews of the site on mobile! <br>
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/4b6f3e51-9813-475a-9d61-89ff9e84686d" width="200" height="auto">
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/7170699b-9f7a-45ef-ac83-5f094d6e8bad" width="200" height="auto">
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/431bfa6e-d7d6-4476-8fc5-88e0eaa91be8" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/29690a3d-589c-4524-817d-7bda7147b6c4" width="200" height="auto">
+
+
 
 
 
