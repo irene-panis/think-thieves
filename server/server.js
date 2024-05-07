@@ -5,6 +5,8 @@ const __dirname = import.meta.dirname;
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 import cors from "cors";
 import { createClient } from 'redis';
+import { register } from 'swiper/element/bundle';
+register(); // register swiper elements
 
 import getValMatches from './utils/valscraper.js';
 import getLeagueMatches from "./utils/leaguescraper.js";
