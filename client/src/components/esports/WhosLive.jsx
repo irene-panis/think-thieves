@@ -33,7 +33,14 @@ export const WhosLive = ( props ) => {
             key={index}
             className="border border-black p-2 flex flex-col"
           >
-            <span className="font-bold">{stream.streamData.user_name}</span>
+            <a
+            href={stream.streamData.user_login ? `https://www.twitch.tv/${stream.streamData.user_name}` : `https://www.youtube.com/@${stream.streamData.user_name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold"
+            >
+              {stream.streamData.user_name}
+            </a>
             <span>{stream.streamData.game_name}</span>
             <span className="italic">{stream.streamData.title}</span>
           </div>
