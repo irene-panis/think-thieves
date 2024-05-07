@@ -199,12 +199,6 @@ app.get('/api/get-streams/:roster', async (req, res) => {
   }
 });
 
-app.get('/api/youtube', async (req, res) => {
-  console.log("api call");
-  const response = await getYoutubeStreams();
-  return res.json(response);
-});
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}!`);
 })
