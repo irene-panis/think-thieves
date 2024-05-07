@@ -178,6 +178,7 @@ swiper-container {
 
 swiper-slide {
   height: 100%;
+  position: relative;
 }
 
 swiper-container::part(bullet-active) {
@@ -186,7 +187,5 @@ swiper-container::part(bullet-active) {
 
 swiper-container::part(button-next),
 swiper-container::part(button-prev) {
-  color: white;
-  opacity: 20%;
-  height: 25px;
+  visibility: hidden;
 }
