@@ -169,3 +169,22 @@ html,body {
   border-left: 2px solid white;
   height: 100%;
 }
+
+/* carousel css */
+
+.carousel-indicator {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.dot {
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 75%;
+}
+.active-img {
+  background-color: grey;
+}
