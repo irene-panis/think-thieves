@@ -20,7 +20,8 @@ No deployed site yet but here are a few previews of the site on mobile! <br>
 
 
 ## Current progress
-- Esports tab to showcase team profiles
+- Finishing touches on esports and content tabs
+- Designing/outlining merch tab
 - Implementing mobile-first design
 
 ## Technologies
