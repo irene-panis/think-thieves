@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { register } from 'swiper/element/bundle';
 
 register();
