@@ -170,3 +170,23 @@ html,body {
   height: 100%;
 }
 
+/* swiper css */
+
+swiper-container {
+  height: calc(100vh - 4rem);
+}
+
+swiper-slide {
+  height: 100%;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: white;
+}
+
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+  color: white;
+  opacity: 20%;
+  height: 25px;
+}
