@@ -172,21 +172,21 @@ html,body {
 
 /* swiper css */
 
-swiper-container {
+.merch-carousel swiper-container {
   height: calc(100vh - 4rem);
 }
 
-swiper-slide {
+.merch-carousel swiper-slide {
   height: 100%;
   position: relative;
 }
 
-swiper-container::part(bullet-active) {
+.merch-carousel swiper-container::part(bullet-active) {
   background-color: white;
 }
 
-swiper-container::part(button-next),
-swiper-container::part(button-prev) {
+.merch-carousel swiper-container::part(button-next),
+.merch-carousel swiper-container::part(button-prev) {
   height: 15px;
   color: white;
 }
