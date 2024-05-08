@@ -187,5 +187,6 @@ swiper-container::part(bullet-active) {
 
 swiper-container::part(button-next),
 swiper-container::part(button-prev) {
-  visibility: hidden;
+  height: 15px;
+  color: white;
 }
