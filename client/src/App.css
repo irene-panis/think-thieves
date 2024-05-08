@@ -190,3 +190,22 @@ html,body {
   height: 15px;
   color: white;
 }
+
+.line-carousel swiper-container::part(button-next),
+.line-carousel swiper-container::part(button-prev) {
+  height: 15px;
+  color: black;
+}
+
+.line-carousel swiper-container {
+  height: 100%;
+  width: 100%;
+}
+
+.line-carousel swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
