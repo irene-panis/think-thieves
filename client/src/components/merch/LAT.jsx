@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useRef } from "react";
 import { register } from 'swiper/element/bundle';
+import { FeaturedProducts } from "./FeaturedProducts";
 
 register();
 
@@ -11,6 +12,29 @@ export const LAT = () => {
     '/apparel/lat/two.jpeg',
     '/apparel/lat/three.jpeg',
   ];
+
+  const featured = [
+    {
+      path: '/apparel/lat/featured1.jpeg',
+      hover: '/apparel/lat/featured1b.jpeg',
+      name: `OFFICIAL LA THIEVES HOME JERSEY`
+    },
+    {
+      path: '/apparel/lat/featured2.jpeg',
+      hover: '/apparel/lat/featured2b.jpeg',
+      name: `WARPED HOODIE - RED`
+    },
+    {
+      path: '/apparel/lat/featured3.jpeg',
+      hover: '/apparel/lat/featured3b.jpeg',
+      name: `ARCH T-SHIRT - BLACK`
+    },
+    {
+      path: '/apparel/lat/featured4.jpeg',
+      hover: '/apparel/lat/featured4b.jpeg',
+      name: `LA THIEVES SIGNATURE NEW ERA 9FIFTY SNAPBACK`
+    }
+  ]
 
   return (
     <>
@@ -38,6 +62,7 @@ export const LAT = () => {
           </swiper-slide>
         </swiper-container>
       </div>
+      <FeaturedProducts productsArray={featured}/>
     </>
   );
 }
