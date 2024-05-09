@@ -209,3 +209,9 @@ html,body {
   align-items: center;
   height: 100%;
 }
+
+@media (max-width: 400px) { // for when screen is smaller than product card width
+  .product {
+    width: calc(100% - 20px); 
+  }
+}
