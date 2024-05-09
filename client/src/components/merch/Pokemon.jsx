@@ -4,7 +4,7 @@ import { register } from 'swiper/element/bundle';
 
 register();
 
-export const Foundations = () => {
+export const Pokemon = () => {
   const swiperElRef = useRef(null);
   const images = [
     '/apparel/pokemon/one.jpeg',

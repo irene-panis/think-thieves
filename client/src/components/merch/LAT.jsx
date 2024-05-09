@@ -4,7 +4,7 @@ import { register } from 'swiper/element/bundle';
 
 register();
 
-export const Foundations = () => {
+export const LAT = () => {
   const swiperElRef = useRef(null);
   const images = [
     '/apparel/lat/one.jpeg',
