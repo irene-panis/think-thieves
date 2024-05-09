@@ -1,6 +1,6 @@
 import { MerchCarousel } from "../components/merch/MerchCarousel"
 import { useState } from "react";
-import { Foundations } from "../components/merch/Foundations";
+import { ApparelContainer } from "../components/merch/ApparelContainer";
 
 export const Apparel = () => {
   const carouselImgs = [
@@ -31,7 +31,7 @@ export const Apparel = () => {
   return (
     <div className="apparel-wrapper w-full">
       <MerchCarousel images={carouselImgs} onApparelChange={handleApparelChange}/>
-      <Foundations apparel={apparel}/>
+      <ApparelContainer apparel={apparel}/>
     </div>
   )
 }
