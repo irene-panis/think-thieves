@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useRef } from "react";
 import { register } from 'swiper/element/bundle';
+import { FeaturedProducts } from "./FeaturedProducts";
 
 register();
 
@@ -11,6 +12,28 @@ export const Pokemon = () => {
     '/apparel/pokemon/two.jpeg',
     '/apparel/pokemon/three.jpeg',
   ];
+  const featured = [
+    {
+      path: '/apparel/pokemon/featured1.jpeg',
+      hover: `/home/poke.jpeg`,
+      name: `PIKACHU GOLDEN BEAR VARSITY JACKET - BLACK`
+    },
+    {
+      path: '/apparel/pokemon/featured2.jpeg',
+      hover: `/apparel/pokemon/featured2b.jpeg`,
+      name: `VENUSAUR HOODIE - LIGHT GREY`
+    },
+    {
+      path: '/apparel/pokemon/featured3.jpeg',
+      hover: `/apparel/pokemon/featured3b.jpeg`,
+      name: `SQUIRTLE CORE T-SHIRT - MEDIUM BLUE`
+    },
+    {
+      path: '/apparel/pokemon/featured4.jpeg',
+      hover: `/apparel/pokemon-merch.jpeg`,
+      name: `PIKACHU SHERPA FLEECE JACKET - GREY`
+    }
+  ]
 
   return (
     <>
@@ -38,6 +61,7 @@ export const Pokemon = () => {
           </swiper-slide>
         </swiper-container>
       </div>
+      <FeaturedProducts productsArray={featured}/>
     </>
   );
 }
