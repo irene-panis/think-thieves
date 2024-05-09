@@ -46,18 +46,19 @@ export const Pokemon = () => {
           effect="slide"
         >
           <swiper-slide>
-            <div className="font-oswald font-bold text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em] translate-y-3">Everyday</div>
+            <div className="font-oswald font-bold text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em]">Be the</div>
             <img className="object-cover h-1/2 w-2/3" src={images[0]} />
-            <div className="font-oswald text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em] font-bold">Styles</div>
+            <div className="font-oswald text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em] font-bold">Very best</div>
           </swiper-slide>
           <swiper-slide>
-            <div className="text-center w-[80%] -translate-y-3">Drawing inspiration from classic athleticwear and utilitarian tech wear.</div>
+            <div className="text-center w-[80%] -translate-y-3">Sixteen-piece collection inspired by the world of Pokémon.</div>
             <img className="object-cover h-1/2 w-2/3" src={images[1]} />
+            <div className="text-center w-[80%] translate-y-3">For Pokémon enthusiasts and fans of streetwear alike.</div>
           </swiper-slide>
           <swiper-slide>
-            <div className="lowercase">Accessible products //</div>
+            <div className="lowercase">Detailed elements //</div>
             <img className="object-cover h-1/2 w-2/3" src={images[2]} />
-            <div className="lowercase">// True to heritage</div>
+            <div className="lowercase">// Vibrant colors</div>
           </swiper-slide>
         </swiper-container>
       </div>
