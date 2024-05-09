@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useRef } from "react";
 import { register } from 'swiper/element/bundle';
+import { FeaturedProducts } from "./FeaturedProducts";
 
 register();
 
@@ -11,6 +12,11 @@ export const Foundations = () => {
     '/apparel/foundations/two.jpeg',
     '/apparel/foundations/three.jpeg',
   ];
+  const featured = [
+    '/apparel/foundations/featured1.jpeg',
+    '/apparel/foundations/featured2.jpeg',
+    '/apparel/foundations/featured3.jpeg',
+  ]
 
   return (
     <>
@@ -38,6 +44,7 @@ export const Foundations = () => {
           </swiper-slide>
         </swiper-container>
       </div>
+      <FeaturedProducts productsArray={featured}/>
     </>
   );
 }
