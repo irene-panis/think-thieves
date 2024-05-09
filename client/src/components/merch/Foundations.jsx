@@ -13,9 +13,22 @@ export const Foundations = () => {
     '/apparel/foundations/three.jpeg',
   ];
   const featured = [
-    '/apparel/foundations/featured1.jpeg',
-    '/apparel/foundations/featured2.jpeg',
-    '/apparel/foundations/featured3.jpeg',
+    {
+      path: '/apparel/foundations/featured1.jpeg',
+      name: `FOUNDATIONS SS'24 3L SHELL JACKET - GOLD`
+    },
+    {
+      path: '/apparel/foundations/featured2.jpeg',
+      name: `FOUNDATIONS SS'24 HOODIE - BROWN`
+    },
+    {
+      path: '/apparel/foundations/featured3.jpeg',
+      name: `FOUNDATIONS LOCKER ROOM T-SHIRT - PLUM`
+    },
+    {
+      path: '/apparel/foundations/featured4.jpeg',
+      name: `FOUNDATIONS SS'24 HOCKEY LONGSLEEVE - CREAM`
+    }
   ]
 
   return (
