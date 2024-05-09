@@ -7,9 +7,9 @@ register();
 export const Foundations = () => {
   const swiperElRef = useRef(null);
   const images = [
-    '/apparel/foundations/one.jpeg',
-    '/apparel/foundations/two.jpeg',
-    '/apparel/foundations/three.jpeg',
+    '/apparel/pokemon/one.jpeg',
+    '/apparel/pokemon/two.jpeg',
+    '/apparel/pokemon/three.jpeg',
   ];
 
   return (
