@@ -210,8 +210,8 @@ html,body {
   height: 100%;
 }
 
-@media (max-width: 400px) { // for when screen is smaller than product card width
+@media (max-width: 400px) { /* makes cards smaller when screen is <400 */
   .product {
-    width: calc(100% - 20px); 
+    width: 100%; 
   }
 }
