@@ -10,7 +10,7 @@ export const Product = ({ product }) => {
         onMouseLeave={(e) => e.currentTarget.style.backgroundImage = `url('${product.path}')`}
       >  
       </div>
-      <div className="h-[80px] flex justify-center items-center">{product.name}</div>
+      <div className="h-[80px] flex justify-center py-2">{product.name}</div>
     </div>
   )
 }
