@@ -38,12 +38,12 @@ export const Jersey = () => {
           </swiper-slide>
           <swiper-slide>
             <div className="text-center w-[80%] -translate-y-3">Official team issued jerseys, from 100T and adidas.</div>
-            <img className="object-cover h-1/2 w-2/3" src={images[1]} />
+            <img className="object-cover object-[65%] h-1/2 w-2/3" src={images[1]} />
             <div className="text-center w-[80%] translate-y-3">Boxy fit, ribbed collars, embroidered logos, iconic adidas stripes.</div>
           </swiper-slide>
           <swiper-slide>
             <div className="lowercase">Maximum comfort //</div>
-            <img className="object-cover h-1/2 w-2/3" src={images[2]} />
+            <img className="object-cover object-[90%] h-1/2 w-2/3" src={images[2]} />
             <div className="lowercase">// Meets aesthetic</div>
           </swiper-slide>
         </swiper-container>
