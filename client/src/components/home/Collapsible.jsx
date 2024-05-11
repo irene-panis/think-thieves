@@ -1,8 +1,4 @@
-import { useRef } from "react";
-
 export const Collapsible = ( props ) => {
-
-  const ref = useRef(null);
 
   const closeSiblings = (coll) => {
     const current = coll.innerText;
@@ -40,24 +36,19 @@ export const Collapsible = ( props ) => {
     const coll = e.target;
     coll.classList.toggle("active");
     var content = coll.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    content.classList.toggle("expanded");
     closeSiblings(coll);
-    ref.current?.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
-    <div className="w-full" ref={ref}>
+    <div className="w-full">
       <button 
         className="collapsible uppercase font-oswald font-bold text-black duration-200 ease-in-out"
         onClick={handleClick}
       >
         {props.header}
       </button>
-      <div className="coll-content h-full">
+      <div className="coll-content">
         {props.content}
       </div>
     </div>

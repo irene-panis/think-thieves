@@ -165,6 +165,10 @@ html,body {
   background-color: #f1f1f1;
 }
 
+.expanded {
+  max-height: 1080px;
+}
+
 .vl {
   border-left: 2px solid white;
   height: 100%;

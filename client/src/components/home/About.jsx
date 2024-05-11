@@ -5,9 +5,8 @@ import { Subheader } from "../Subheader";
 
 export const About = () => {
   return (
-    <div className="about-wrapper flex flex-col justify-center items-center h-screen">
-      <div className="column-one h-full flex flex-col gap-3">
-        <div className="text flex-grow flex flex-col h-2/3 justify-center items-center gap-3 text-center">
+    <div className="about-wrapper flex flex-wrap gap-4 justify-around items-center h-screen p-4">
+      <div className="column-one flex flex-col justify-center gap-3">
           <Header
             header={
               <>
@@ -19,15 +18,8 @@ export const About = () => {
             content="100 THIEVES is the premium lifestyle brand for the gaming generation."
             styles="justify-end text-md"
           />
-        </div>
-        <div className="image-wrapper flex-grow overflow-hidden hidden">
-          <Image
-            src="/home/codchamps.jpeg"
-            styles="w-full h-full object-cover"
-          />
-        </div>
       </div>
-      <div className="column-two h-full">
+      <div className="column-two flex justify-center items-center">
         <Image
           src="/home/co-owners.jpeg"
           styles="h-full w-full"
