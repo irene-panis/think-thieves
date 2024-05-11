@@ -4,35 +4,25 @@ import { Subheader } from "../Subheader"
 
 export const Culture = ( ) => {
   return (
-    <div className="culture-wrapper flex flex-col gap-10">
+    <div className="culture-wrapper flex flex-col">
       <Header
         header="Our Culture"
+        divStyles="py-10"
       />
-      <div className="culture-imgs h-screen grid grid-cols-2 grid-rows-5 gap-5">
-        <Image
-          src="/home/gucci.jpeg"
-          styles="col-start-1 col-span-2 row-span-2"
-        />
-        <Image
-          src="/home/trophy.jpeg"
-          styles="col-start-2 col-span-1 row-start-4 row-span-1"
-        />
-        <Image
-          src="/home/jjk.jpeg"
-          styles="col-start-4 col-span-1 row-start-3 row-span-1 hidden"
-        />
-        <Subheader
-          content="Our mission is to give every gamer something to be proud of."
-          divStyles="col-start-1 col-span-2 row-start-3 row-span-1 items-center uppercase"
-          spanStyles="culture-head"
-        />
+      <Subheader
+        content="Our mission is to give every gamer something to be proud of."
+        divStyles="items-center uppercase"
+        spanStyles="culture-head"
+      />
+      <img src="/home/gucci.jpeg" className="object-cover"/>
+      <div className="culture-text flex flex-col gap-6 max-w-[1000px] pt-10">
         <Subheader
           content="We believe in the power of community and the thrill of competition."
-          divStyles="col-start-1 col-span-1 row-start-4 row-span-1 uppercase items-center"
+          divStyles="uppercase items-center"
         />
         <Subheader
           content="With a relentless commitment to winning and a dedication to producing top-tier content, we're making a name for ourselves as leaders in the gaming industry, and we're not stopping now."
-          divStyles="col-start-1 col-span-2 row-start-5 row-span-1 uppercase items-center"
+          divStyles="uppercase items-center"
         />
       </div>
     </div>
