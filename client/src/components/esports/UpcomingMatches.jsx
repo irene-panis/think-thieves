@@ -46,7 +46,7 @@ export const UpcomingMatches = ( props ) => {
           <div className="italic">No upcoming matches</div>
         ) : (
           upcoming.map((team, index) => (
-            <div className="team flex flex-col border border-black shadow-md p-2" key={index}>
+            <div className="team flex flex-col border border-black shadow-md p-2 min-h-[150px] flex flex-col justify-evenly" key={index}>
               <span className="font-bold uppercase">{team.name}</span>
               <span>{formatDate(team.date)}</span>
               <span>{team.event}</span>

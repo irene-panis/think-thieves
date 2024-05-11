@@ -31,7 +31,7 @@ export const WhosLive = ( props ) => {
         streamers.map((stream, index) => (
           <div
             key={index}
-            className="border border-black p-2 flex flex-col"
+            className="border border-black p-2 flex flex-col min-h-[150px] flex flex-col justify-evenly"
           >
             <a
             href={stream.streamData.user_login ? `https://www.twitch.tv/${stream.streamData.user_name}` : `https://www.youtube.com/@${stream.streamData.user_name}`}
