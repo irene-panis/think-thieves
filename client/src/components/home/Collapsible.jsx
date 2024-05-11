@@ -12,22 +12,22 @@ export const Collapsible = ( props ) => {
         content.firstChild.classList.remove("active");
         apparel.firstChild.classList.remove("active");
         // close content and apparel
-        content.lastChild.style.maxHeight = null;
-        apparel.lastChild.style.maxHeight = null;
+        content.lastChild.classList.remove("expanded");
+        apparel.lastChild.classList.remove("expanded");
         break;
       case 'CONTENT':
         // close esports and apparel
         esports.firstChild.classList.remove("active");
         apparel.firstChild.classList.remove("active");
-        esports.lastChild.style.maxHeight = null;
-        apparel.lastChild.style.maxHeight = null;
+        esports.lastChild.classList.remove("expanded");
+        apparel.lastChild.classList.remove("expanded");
         break;
       case 'APPAREL':
         // close esports and content
         esports.firstChild.classList.remove("active");
         content.firstChild.classList.remove("active");
-        esports.lastChild.style.maxHeight = null;
-        content.lastChild.style.maxHeight = null;
+        esports.lastChild.classList.remove("expanded");
+        content.lastChild.classList.remove("expanded");
         break;
     }
   }
