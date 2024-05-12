@@ -143,7 +143,7 @@ export const Team = ( props ) => {
   }, [props.name]);
 
   return (
-    <div className="m-2 flex flex-col gap-4">
+    <div className="my-2 mx-[5%] flex flex-col gap-4">
       <Header
         header={props.name}
       />
