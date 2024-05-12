@@ -219,3 +219,24 @@ html,body {
     width: 100%; 
   }
 }
+
+@media (min-width: 1024px) { /* slanted images on teamselect on large screen sizes */
+  .slanted-item:nth-child(1) {
+    margin-right: -100px;
+    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    z-index: 2;
+  }
+  
+  .slanted-item:nth-child(2) {
+    margin-left: -50px;
+    margin-right: -50px;
+    clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+    z-index: 1;
+  }
+  
+  .slanted-item:nth-child(3) {
+    margin-left: -100px;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+}
