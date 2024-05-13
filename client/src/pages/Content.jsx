@@ -13,13 +13,16 @@ export const Content = () => {
     setCreator(newCreator);
   } 
 
+  const containerHeight = `calc(100vh - 4rem)`;
 
   return (
-    <div className="content-wrapper w-full py-10">
-      <Subheader divStyles="uppercase text-center" content="100 Thieves is proud to be the home to the most popular creators in gaming."/>
-      <div className="creator-container flex h-full flex-col">
-        <Creators onCreatorChange={handleCreatorChange} currentCreator={creator}/>
-        <CreatorSpotlight creator={creator}/>
+    <div className="content-wrapper w-full">
+      <div style={{ height: containerHeight }}>
+        <Subheader divStyles="uppercase text-center" content="100 Thieves is proud to be the home to the most popular creators in gaming."/>
+        <div className="creator-container flex h-full flex-col lg:flex-row-reverse">
+          <Creators onCreatorChange={handleCreatorChange} currentCreator={creator}/>
+          <CreatorSpotlight creator={creator}/>
+        </div>
       </div>
       <CreatorFeed/>
     </div>
