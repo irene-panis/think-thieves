@@ -239,4 +239,12 @@ html,body {
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
     z-index: 0;
   }
+
+  .creator-container {
+    height: calc(100vh - 4rem);
+  }
+
+  .creator-spotlight {
+    width: 50%;
+  }
 }

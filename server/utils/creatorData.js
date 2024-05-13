@@ -4,6 +4,7 @@ export const creators = [
     title: 'CEO',
     bio: 'THE GAMING LIFESTYLE VISIONARY, NADESHOT IS THE EMBODIMENT OF EVERY GAMER’S DREAM. HUSTLING FOR THE LAST 11 YEARS, NADESHOT HAS BEEN A GAME CHANGER SINCE HE STEPPED ON THE SCENE. FROM CALL OF DUTY PLAYER, TO STREAMER, TO CONTENT CREATOR, AND CEO OF 100 THIEVES.',
     img: '/content/nadeshot.jpeg',
+    img_lg: '/content/nadeshot2.jpeg',
     socials: [
       { platform: 'twitter', link: 'https://twitter.com/Nadeshot' },
       { platform: 'twitch', link: 'https://www.twitch.tv/nadeshot' },
