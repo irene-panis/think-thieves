@@ -20,9 +20,8 @@ No deployed site yet but here are a few previews of the site on mobile! <br>
 
 
 ## Current progress
-- Finishing touches on esports and content tabs
-- Designing/outlining merch tab
-- Implementing mobile-first design
+- Finishing touches on design
+- Scaling mobile layout up to web
 
 ## Technologies
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
