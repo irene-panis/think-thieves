@@ -20,7 +20,7 @@ export const CreatorSpotlight = ( { creator } ) => {
   const src = windowWidth < 640 ? creator.img : creator.img_lg;
 
   return (
-    <div className="creator-spotlight mx-4 flex flex-col gap-2">
+    <div className="creator-spotlight mx-4 flex flex-col gap-2 pt-[2rem]">
       <Image src={src}/>
       <div className="creator-info flex flex-col">
         <div className="creator-simple flex justify-between">
