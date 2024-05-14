@@ -1,8 +1,9 @@
 import { MerchCarousel } from "../components/merch/MerchCarousel"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ApparelContainer } from "../components/merch/ApparelContainer";
 
 export const Apparel = () => {
+  const apparelContainerRef = useRef(null);
   const carouselImgs = [
     {
       img: '/apparel/foundations-merch.jpeg',
@@ -30,12 +31,15 @@ export const Apparel = () => {
 
   const handleApparelChange = (newApparel) => {
     setApparel(newApparel);
+    apparelContainerRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <div className="apparel-wrapper w-full">
       <MerchCarousel images={carouselImgs} onApparelChange={handleApparelChange}/>
-      <ApparelContainer apparel={apparel}/>
+      <div id="apparel-carousel" ref={apparelContainerRef}>
+        <ApparelContainer apparel={apparel}/>
+      </div>
     </div>
   )
 }

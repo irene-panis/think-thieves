@@ -1,10 +1,9 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { register } from 'swiper/element/bundle';
 
 register();
 
 export const MerchCarousel = ({ images, onApparelChange }) => {
-  const swiperElRef = useRef(null);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -24,7 +23,6 @@ export const MerchCarousel = ({ images, onApparelChange }) => {
   return (
     <div className="merch-carousel">
       <swiper-container
-        ref={swiperElRef}
         slides-per-view="1"
         navigation="true"
         pagination="true"
@@ -37,7 +35,7 @@ export const MerchCarousel = ({ images, onApparelChange }) => {
             <div className="slide-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center drop-shadow-md text-white">
               <h2 className="font-bold font-dmmono text-3xl">{img.text}</h2>
               <span
-                className="underline hover:bg-black hover:text-white duration-200 ease-in-out"
+                className="underline hover:bg-black hover:text-white duration-200 ease-in-out clickable"
                 onClick={() => onApparelChange(img.text)}
               >
                 LEARN MORE

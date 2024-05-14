@@ -37,7 +37,7 @@ export const Foundations = () => {
 
   return (
     <>
-      <div className="line-carousel h-screen relative flex flex-col justify-center align-center font-oswald">
+      <div className="line-carousel h-screen relative flex flex-col justify-center items-center font-oswald">
         <swiper-container
           ref={swiperElRef}
           slides-per-view="1"
