@@ -40,7 +40,7 @@ export const WhosLive = ( props ) => {
                   href={stream.streamData.user_login ? `https://www.twitch.tv/${stream.streamData.user_name}` : `https://www.youtube.com/@${stream.streamData.user_name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold"
+                  className="font-bold hover:bg-black hover:text-white duration-200 ease-in-out"
                 >
                   {stream.streamData.user_name}
                 </a>
