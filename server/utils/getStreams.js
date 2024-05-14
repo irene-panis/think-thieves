@@ -8,7 +8,7 @@ export const getStreams = async ( token, roster ) => {
       params = "?user_login=eylaa&user_login=meech_lol&user_login=quidlolkr&user_login=city072331&user_login=generalsniper";
       break;
     case 'CALL OF DUTY':
-      params = "?user_login=odanghosty&user_login=joedeceivess&user_login=krempw&user_login=nastie_";
+      params = "?user_login=astrosinmyafro&user_login=odanghosty&user_login=joedeceivess&user_login=krempw&user_login=nastie_";
       break;
     case 'CONTENT':
       params = "?user_login=nadeshot&user_login=brookeab&user_login=hiko&user_login=iitztimmy&user_login=legiqn&user_login=lidyuh&user_login=loughh&user_login=nicewigg&user_login=noahj456&user_login=peterpark&user_login=sparkles_qt&user_login=vinnie&user_login=kingwoolz&user_login=yassuo"

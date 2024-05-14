@@ -93,6 +93,14 @@ export const Team = ( props ) => {
   ];
   const cdlRoster = [
     {
+      ign: 'Afro',
+      img: '/esports/afro.jpeg',
+      socials: [
+        { platform: 'twitter', link: 'https://twitter.com/AstrosInMyAfro' },
+        { platform: 'twitch', link: 'https://twitch.tv/astrosinmyafro' }
+      ]
+    },
+    {
       ign: 'Ghosty',
       img: '/esports/ghosty.jpeg',
       socials: [
