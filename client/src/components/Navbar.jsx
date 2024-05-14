@@ -27,6 +27,7 @@ export const Navbar = (  ) => {
         <FontAwesomeIcon 
           icon={faBars} 
           onClick={toggleNav}
+          className="clickable"
         />
       </div>
       <ul className="nav-items text-black uppercase hidden text-center tracking-widest absolute top-0 left-0 w-full mt-16 bg-white py-2">
