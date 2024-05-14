@@ -13,15 +13,9 @@ No deployed site yet but here are a few previews of the site on mobile! <br>
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/431bfa6e-d7d6-4476-8fc5-88e0eaa91be8" width="200" height="auto">
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/29690a3d-589c-4524-817d-7bda7147b6c4" width="200" height="auto">
 
-
-
-
-
-
-
 ## Current progress
 - Finishing touches on design
-- Scaling mobile layout up to web
+- Setting up deployment
 
 ## Technologies
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
