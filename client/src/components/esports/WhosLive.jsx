@@ -1,6 +1,7 @@
 // use twitch api to check whos live
 import { useState, useEffect } from "react";
 import { Subheader } from "../Subheader";
+import { SocialIcon } from "../SocialIcon";
 
 export const WhosLive = ( props ) => {
   const [streamers, setStreamers] = useState([]);
@@ -33,14 +34,25 @@ export const WhosLive = ( props ) => {
             key={index}
             className="border border-black p-2 flex flex-col min-h-[150px] flex flex-col justify-evenly shadow-md"
           >
-            <a
-            href={stream.streamData.user_login ? `https://www.twitch.tv/${stream.streamData.user_name}` : `https://www.youtube.com/@${stream.streamData.user_name}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold"
-            >
-              {stream.streamData.user_name}
-            </a>
+            <div className="stream-link flex gap-2 items-center">
+              <span>
+                <a
+                  href={stream.streamData.user_login ? `https://www.twitch.tv/${stream.streamData.user_name}` : `https://www.youtube.com/@${stream.streamData.user_name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold"
+                >
+                  {stream.streamData.user_name}
+                </a>
+              </span>
+              { 
+                stream.streamData.user_login ? (
+                  <SocialIcon platform="twitch"/> 
+                ) : (
+                  <SocialIcon platform="youtube"/>
+                )
+              }
+            </div>
             <span>{stream.streamData.game_name}</span>
             <span className="italic">{stream.streamData.title}</span>
           </div>

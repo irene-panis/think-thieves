@@ -214,6 +214,10 @@ html,body {
   height: 100%;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 @media (max-width: 400px) { /* makes cards smaller when screen is <400 */
   .product {
     width: 100%; 

@@ -9,7 +9,7 @@ export const Creators = ( {onCreatorChange, currentCreator} ) => {
           <li 
             key={index} 
             onClick={() => onCreatorChange(creator)}
-            className={`font-oswald text-5xl hover:text-zinc-500 duration-200 ease-in-out p-2 ${currentCreator === creator ? 'text-zinc-500 translate-y-2 lg:translate-x-4 lg:translate-y-0' : ''}`}
+            className={`font-oswald text-5xl lg:text-8xl hover:text-zinc-500 duration-200 ease-in-out p-2 clickable ${currentCreator === creator ? 'text-zinc-500 translate-y-2 lg:translate-x-4 lg:translate-y-0' : ''}`}
           >
             {creator.name}
           </li>
