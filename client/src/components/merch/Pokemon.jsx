@@ -47,7 +47,7 @@ export const Pokemon = () => {
         >
           <swiper-slide>
             <div className="font-oswald font-bold text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em]">Be the</div>
-            <img className="object-cover h-1/2 w-2/3" src={images[0]} />
+            <img className="object-cover h-1/2 lg:h-3/4 w-2/3" src={images[0]} />
             <div className="font-oswald text-[#131200] uppercase text-4xl tracking-[0.5em] mr-[-0.5em] font-bold">Very best</div>
           </swiper-slide>
           <swiper-slide>

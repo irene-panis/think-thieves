@@ -21,7 +21,7 @@ export const Apparel = () => {
     },
     {
       img: '/apparel/lat-merch.jpg',
-      img_lg: '/apparel/lat2.jpeg',
+      img_lg: '/apparel/lat2.jpg',
       text: `LA THIEVES`
     },
   ];

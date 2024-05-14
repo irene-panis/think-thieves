@@ -1,10 +1,25 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { register } from 'swiper/element/bundle';
 
 register();
 
 export const MerchCarousel = ({ images, onApparelChange }) => {
   const swiperElRef = useRef(null);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const src = windowWidth < 640 ? 'img' : 'img_lg';
 
   return (
     <div className="merch-carousel">
@@ -28,7 +43,7 @@ export const MerchCarousel = ({ images, onApparelChange }) => {
                 LEARN MORE
               </span>
             </div>
-            <img className="w-full h-full object-cover" src={img.img} />
+            <img className={`w-full h-full object-cover ${img.text === '100T x POKEMON' ? 'object-top' : ''}`} src={img[src]} />
           </swiper-slide>
         ))}
       </swiper-container>
