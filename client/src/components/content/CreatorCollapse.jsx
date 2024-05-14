@@ -7,7 +7,7 @@ export const CreatorCollapse = ( { bio } ) => {
   const handleClick = (e) => {
     const coll = e.target;
     var content = coll.nextElementSibling;
-    const newMaxHeight = showBio ? null : content.scrollHeight + "px";
+    const newMaxHeight = showBio ? null : "500px";
     setShowBio(!showBio);
     content.style.maxHeight = newMaxHeight;
   }
