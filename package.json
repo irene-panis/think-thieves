@@ -2,6 +2,7 @@
   "name": "thieves",
   "private": true,
   "version": "0.0.0",
+  "proxy": "https://thinkthieves-c78e2959a576.herokuapp.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",
