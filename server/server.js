@@ -32,12 +32,7 @@ client.on('error', err => console.log('Redis Client Error', err));
 await client.connect();
 
 if (process.env.NODE_ENV === 'production') {
-  console.log(process.env.NODE_ENV);
-  console.log("app is in production ...");
   app.use(express.static(path.join(__dirname, '../', 'dist')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
-  });
 }
 
 let matchNumber = 0; // start matchNumber at 0
@@ -214,6 +209,11 @@ app.get('/api/get-streams/:roster', async (req, res) => {
     console.log("Cache Miss - " + req.params.roster + " STREAMS");
     return res.json(streams);
   }
+});
+
+// catch-all route that serves index.html for all routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
