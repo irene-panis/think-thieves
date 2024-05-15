@@ -21,7 +21,13 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(cors());
 
-const client = createClient();
+const client = createClient({
+  url: process.env.REDIS_URL,
+  socket: {
+    tls: true,
+    rejectUnauthorized: false,
+  }
+});
 client.on('error', err => console.log('Redis Client Error', err));
 await client.connect();
 
