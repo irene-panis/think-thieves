@@ -17,11 +17,15 @@ Deployed site: https://thinkthieves-c78e2959a576.herokuapp.com/ <br/>
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/f00e7e41-5191-457e-9d26-636e09b91b00" width="800" height="auto">
 
 ## Mobile previews </br>
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="175" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/0aeb8461-387f-4a65-bb3c-278a4bae5be1" width="175" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/4c783fd7-fb6c-45d2-ac52-fc2560eb8981" width="175" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/02a8be0e-ce64-4527-8fa4-141d234e29f3" width="175" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/8e9da49f-9774-43d7-9467-588ec1fa573d" width="175" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/2e3759f2-ee87-4aa8-88c9-6a278f45a4b4" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/0aeb8461-387f-4a65-bb3c-278a4bae5be1" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/4c783fd7-fb6c-45d2-ac52-fc2560eb8981" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/02a8be0e-ce64-4527-8fa4-141d234e29f3" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/8e9da49f-9774-43d7-9467-588ec1fa573d" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/fdd1f3e9-0443-43a7-afa7-9e4d735fb7e0" width="200" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/e07f363c-2567-4d5a-9b66-2247f06b89cb" width="200" height="auto">
+
 
 ## Technologies
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
