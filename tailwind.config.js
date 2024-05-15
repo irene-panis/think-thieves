@@ -15,9 +15,9 @@ export default {
     extend: {
       backgroundImage: {
         'hero': "url('/home/100tlexus.jpeg')",
-        'cdl': "url('esports//LAT.jpeg')",
-        'val': "url('esports/val.jpeg')",
-        'lcs': "url('esports/league.jpeg')"
+        'cdl': "url('/esports/LAT.jpeg')",
+        'val': "url('/esports/val.jpeg')",
+        'lcs': "url('/esports/league.jpeg')"
       },
     },
   },
