@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cors());
 
 const client = createClient({
-  url: process.env.REDIS_URL,
+  url: process.env.REDIS_TLS_URL,
   socket: {
     tls: true,
     rejectUnauthorized: false,
