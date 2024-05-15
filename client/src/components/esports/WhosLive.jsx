@@ -23,7 +23,7 @@ export const WhosLive = ( props ) => {
   }, [props.team]);
 
   return (
-    <div className="flex flex-col grow bg-[#131200] text-white p-4">
+    <div className="flex flex-col grow p-4">
       <Subheader content="WHO'S LIVE" />
       <div className="flex flex-col gap-2">
         {streamers.length === 0 ? (
@@ -32,7 +32,7 @@ export const WhosLive = ( props ) => {
         streamers.map((stream, index) => (
           <div
             key={index}
-            className="border border-white p-2 flex flex-col min-h-[150px] flex flex-col justify-evenly shadow-md"
+            className="bg-[#131200] text-white p-2 flex flex-col min-h-[150px] flex flex-col justify-evenly shadow-md"
           >
             <div className="stream-link flex gap-2 items-center">
               <span>
