@@ -22,7 +22,7 @@ export const UpcomingMatches = ( props ) => {
           endpoint = 'get-cod';
           break;
       }
-      const getURL = `http://localhost:3001/api/${endpoint}`;
+      const getURL = `/api/${endpoint}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {

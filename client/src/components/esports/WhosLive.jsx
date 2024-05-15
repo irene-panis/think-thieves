@@ -8,7 +8,7 @@ export const WhosLive = ( props ) => {
 
   useEffect(() => {
     const grabData = async () => {
-      const getURL = `http://localhost:3001/api/get-streams/${props.team}`;
+      const getURL = `/api/get-streams/${props.team}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
