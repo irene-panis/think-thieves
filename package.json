@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "node server/server.js",
-    "start": "npm run dev && npm run server"
+    "start": "npm run server"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
