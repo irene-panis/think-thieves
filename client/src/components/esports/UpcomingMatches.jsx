@@ -22,7 +22,7 @@ export const UpcomingMatches = ( props ) => {
           endpoint = 'get-cod';
           break;
       }
-      const getURL = `/api/${endpoint}`;
+      const getURL = `https://thinkthieves-c78e2959a576.herokuapp.com/api/${endpoint}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
