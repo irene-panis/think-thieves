@@ -2,20 +2,26 @@
 
 Think Thieves is a re-imagining of the 100 Thieves website, designed to place a larger emphasis on the team's esports sector. While the original 100 Thieves website is beautiful as it is, I felt that there was not enough information being showcased regarding the organization's esports teams and content creators. Thus, Think Thieves is meant to exacerbate this by placing esports and content at the forefront of the site's design. 
 
-Web scrapers and APIs are used in tandem to grab the latest data about who's currently live and when 100 Thieves' esports teams are playing next. Match and stream data are cached to prevent overly-repeated API calls and scrapes. Match data is retrieved by web scraping vlr.gg for 100T VAL matches and using the Liquipedia API to parse for 100T LoL's and LA Thieves' matches. Current Twitch streams are retrieved using the Twitch API while current YouTube streams are retrieved by scraping the channels of those that stream on YouTube (which is only a tiny handful).
+Web scrapers and APIs are used in tandem to grab the latest data about who's currently live and when 100 Thieves' esports teams are playing next. Match and stream data are cached to prevent overly-repeated API calls and scrapes. Match data is retrieved by web scraping vlr.gg for 100T VAL matches and using the Liquipedia API to parse for 100T LoL's and LA Thieves' matches. Currently live Twitch streams are retrieved using the Twitch API while currently live YouTube streams are retrieved by scraping the channels of those that stream on YouTube (which is only a tiny handful).
 
-Think Thieves is being built using React, with Express to assist in running the Puppeteer web scraper. Match and stream data are cached using Redis.
+Think Thieves was built using React, with Express to assist in running the Puppeteer web scraper. Match and stream data are cached using Redis.
 
-## Preview 
-No deployed site yet but here are a few previews of the site on mobile! <br>
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/7170699b-9f7a-45ef-ac83-5f094d6e8bad" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/431bfa6e-d7d6-4476-8fc5-88e0eaa91be8" width="200" height="auto">
-<img src="https://github.com/irene-panis/think-thieves/assets/65985104/29690a3d-589c-4524-817d-7bda7147b6c4" width="200" height="auto">
+Most of the images and copywriting were borrowed from the official 100 Thieves website, as this is meant to be a small personal project.
 
-## Current progress
-- Finishing touches on design
-- Setting up deployment
+## Deployment 
+Deployed site: https://thinkthieves-c78e2959a576.herokuapp.com/ <br/>
+
+## Desktop previews <br/>
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/929e3529-5f48-47a8-87fa-3f58eb863d3e" width="800" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/e5d93406-02e2-43e1-a357-e0e22978cabb" width="800" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/f00e7e41-5191-457e-9d26-636e09b91b00" width="800" height="auto">
+
+## Mobile previews </br>
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/552c0d48-6682-42a6-b548-96957b1b0035" width="175" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/0aeb8461-387f-4a65-bb3c-278a4bae5be1" width="175" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/4c783fd7-fb6c-45d2-ac52-fc2560eb8981" width="175" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/02a8be0e-ce64-4527-8fa4-141d234e29f3" width="175" height="auto">
+<img src="https://github.com/irene-panis/think-thieves/assets/65985104/8e9da49f-9774-43d7-9467-588ec1fa573d" width="175" height="auto">
 
 ## Technologies
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -30,3 +36,6 @@ No deployed site yet but here are a few previews of the site on mobile! <br>
 ![image](https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white)
 
 [source](https://github.com/alexandresanlim/Badges4-README.md-Profile?tab=readme-ov-file#how-to-use)
+
+## About Me
+Hi, I'm Irene :) I graduated from The Coding Boot Camp @ UC San Diego in September 2023, and these days I'm just trying to build cool stuff and hone technologies old and new while I try to land a job in web dev / software engineering!
