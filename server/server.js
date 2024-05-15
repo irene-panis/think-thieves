@@ -19,9 +19,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors({
-  origin: /^https?:\/\/(www\.)?think-thieves.vercel\.app$/
-}));
+app.use(cors());
 
 const client = createClient({
   url: process.env.REDIS_TLS_URL,
