@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 const getYoutubeStreams = async () => {
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
 
   const creators = ['Valkyrae', 'Fuslie', 'CouRageJD', 'NoahJ456'];
 
