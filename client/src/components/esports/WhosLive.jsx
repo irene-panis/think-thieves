@@ -8,7 +8,7 @@ export const WhosLive = ( props ) => {
 
   useEffect(() => {
     const grabData = async () => {
-      const getURL = `/api/get-streams/${props.team}`;
+      const getURL = `https://thinkthieves-c78e2959a576.herokuapp.com/api/get-streams/${props.team}`;
       const response = await fetch(getURL, {
         method: "GET",
         headers: {
