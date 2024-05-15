@@ -31,6 +31,13 @@ const client = createClient({
 client.on('error', err => console.log('Redis Client Error', err));
 await client.connect();
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+  });
+}
+
 let matchNumber = 0; // start matchNumber at 0
 // this is for uniquely identifying matches
 // handles edge case of matches against same team on same day etc
