@@ -34,9 +34,9 @@ await client.connect();
 if (process.env.NODE_ENV === 'production') {
   console.log(process.env.NODE_ENV);
   console.log("app is in production ...");
-  app.use(express.static(path.join(__dirname, 'dist')));
+  app.use(express.static(path.join(__dirname, '../', 'dist')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
   });
 }
 
