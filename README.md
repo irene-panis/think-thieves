@@ -9,7 +9,9 @@ Think Thieves was built using React, with Express to assist in running the Puppe
 Most of the images and copywriting were borrowed from the official 100 Thieves website, as this is meant to be a small personal project.
 
 ## Deployment 
-Deployed site: https://thinkthieves-c78e2959a576.herokuapp.com/ <br/>
+Deployed site: https://thinkthieves-c78e2959a576.herokuapp.com/
+
+NOTE - The site will likely take 5-10 seconds to load initially as I am running my projects on an eco plan, which means they need to wake up after periods of inactivity.
 
 ## Desktop previews <br/>
 <img src="https://github.com/irene-panis/think-thieves/assets/65985104/929e3529-5f48-47a8-87fa-3f58eb863d3e" width="800" height="auto">
