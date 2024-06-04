@@ -26,7 +26,7 @@ const client = createClient({
   socket: {
     tls: true,
     rejectUnauthorized: false,
-    connectTimeout: 10000
+    pingInterval: 1000
   }
 });
 client.on('error', err => console.log('Redis Client Error', err));
