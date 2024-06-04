@@ -26,8 +26,8 @@ const client = createClient({
   socket: {
     tls: true,
     rejectUnauthorized: false,
-    pingInterval: 1000
-  }
+  },
+  pingInterval: 1000
 });
 client.on('error', err => console.log('Redis Client Error', err));
 await client.connect();
